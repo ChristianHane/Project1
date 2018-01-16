@@ -31,7 +31,8 @@ body {
     justify-content: center;
 }
 
-.container-register {
+/* __________________________________________________________ */
+.wrap-cont-register{
     height: 650px;
     margin-top: 1000px;
     background-image: url(../images/los-angeles-view.jpg);
@@ -39,23 +40,73 @@ body {
     background-position:fixed; 
     background-size: cover; 
     background-repeat: no-repeat; 
+}
 
+.container-register {
     display: flex;
     justify-content: center;
 }
 
 .register {
     width: 300px;
-    margin-top: 30px;
+    margin-top: 80px;
+}
+
+
+.container-submit-message {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+}
+
+.submit-message {
+    width: 550px;
+    height: 200px;
+    margin-top: 50px;
+}
+
+.yourMessage {
+    height: 200px;
 }
 
 .submit {
-    background-color: transparent;
-    color: yellow;
-    margin-top: 30px;
-    width: 200px;
+    background-color: #02f3d3;
+    border: none;
+    color: #2502c2;
+    margin-top: 50px;
+    width: 110px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* __________________________________________________________ */
+
+
+
+.container-company-info {
+    background-color: #383737;
+    color: white;
+    height: 240px;
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
+.company-info {
+    width: 20%;
+    height: 240px;
+    background-color: #383737;
+    margin: auto;
+}
+
+.Eguide {
+    background-color: #1d1d1d;
+    width: 25%;
+}
 
 /* footer {
     background-color: lightseagreen;
