@@ -5,11 +5,20 @@ html {
     background-size: cover; 
     background-repeat: no-repeat; 
     height: 100%;
+    /* padding: 50px; */
+    background-color: #1d1d1d
+}
+
+.container-nav {
     padding: 50px;
 }
 
 body {
     background-color: transparent;
+}
+.navbar {
+    /* overflow: hidden; */
+    /* position: fixed; */
 }
 .navbar-brand {
     margin-left: 70px;
@@ -17,7 +26,35 @@ body {
 }
 
 
+.container-options {
+    display: flex;
+    justify-content: center;
+}
 
+.container-register {
+    height: 650px;
+    margin-top: 1000px;
+    background-image: url(../images/los-angeles-view.jpg);
+    background-repeat: no-repeat; 
+    background-position:fixed; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+
+    display: flex;
+    justify-content: center;
+}
+
+.register {
+    width: 300px;
+    margin-top: 30px;
+}
+
+.submit {
+    background-color: transparent;
+    color: yellow;
+    margin-top: 30px;
+    width: 200px;
+}
 
 
 /* footer {
