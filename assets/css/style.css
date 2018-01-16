@@ -31,10 +31,21 @@ body {
     justify-content: center;
 }
 
+
+.container-discover {
+    font-size: 200%;
+    margin-top: 550px;
+
+    display: flex;
+    justify-content: center;
+    color: #faf6f6;
+}
+
+
 /* __________________________________________________________ */
 .wrap-cont-register{
     height: 650px;
-    margin-top: 1000px;
+    margin-top: 500px;
     background-image: url(../images/los-angeles-view.jpg);
     background-repeat: no-repeat; 
     background-position:fixed; 
@@ -84,7 +95,7 @@ body {
     background-color: #02f3d3;
     border: none;
     color: #2502c2;
-    margin-top: 30px;
+    margin-top: 20px;
     width: 130px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -97,14 +108,13 @@ body {
 
 
 .container-company-info {
-    background-color: #383737;
+    background-color: #2e2d2d;
     color: white;
     height: 240px;
     width: 100%;
     margin-top: 100px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     text-align: center;
     padding-right: 50px;
     padding-left: 50px;
@@ -113,13 +123,13 @@ body {
 .company-info {
     width: 20%;
     height: 240px;
-    background-color: #383737;
+    background-color: #2e2d2d;
     margin: auto;
     align-self: center; 
 }
 
 .Eguide {
-    background-color: #0c0c0c9a;
+    background-color: #0c0c0cab;
     width: 25%;
 }
 
