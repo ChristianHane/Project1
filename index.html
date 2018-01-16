@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <title>Entertainment Guide</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </head>
@@ -46,7 +45,7 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Location:  City, State">
                             </div>
-                            <button type="submit" class="btn btn-default">Enter</button>
+                            <button type="submit" class="button-search btn btn-default">Enter</button>
                         </form>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#">Contact</a></li>
@@ -55,11 +54,68 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
                                 aria-haspopup="true" aria-expanded="false">Log In <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
+                                <!-- <li><a href="#">Action</a></li>
                                 <li><a href="#">Another action</a></li>
                                 <li><a href="#">Something else here</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">Separated link</a></li> -->
+                                <div class="container-sign-in">
+                                    <div class="row">
+                                        <div class="col-md-4 col-md-offset-4">
+                                            <div class="form-body">
+                                                <ul class="nav nav-tabs final-login">
+                                                    <li class="active"><a data-toggle="tab" href="#sectionA">Sign In</a></li>
+                                                    <li><a data-toggle="tab" href="#sectionB">Join us!</a></li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div id="sectionA" class="tab-pane fade in active">
+                                                        <div class="innter-form">
+                                                            <form class="sa-innate-form" method="post">
+                                                                <label>Email Address</label>
+                                                                <input type="text" name="username">
+                                                                <label>Password</label>
+                                                                <input type="password" name="password">
+                                                                <button type="submit">Sign In</button>
+                                                                <a href="">Forgot Password?</a>
+                                                            </form>
+                                                        </div>
+                                                        <div class="social-login">
+                                                            <p>- - - - - - - - - - - - - Sign In With - - - - - - - - - - - - - </p>
+                                                            <ul>
+                                                                <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
+                                                                <li><a href=""><i class="fa fa-google-plus"></i> Google+</a></li>
+                                                                <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                    <div id="sectionB" class="tab-pane fade">
+                                                        <div class="innter-form">
+                                                            <form class="sa-innate-form" method="post">
+                                                                <label>Name</label>
+                                                                <input type="text" name="username">
+                                                                <label>Email Address</label>
+                                                                <input type="text" name="username">
+                                                                <label>Password</label>
+                                                                <input type="password" name="password">
+                                                                <button type="submit">Join now</button>
+                                                                <p>By clicking Join now, you agree to hifriends's User Agreement, Privacy Policy, and Cookie Policy.</p>
+                                                            </form>
+                                                        </div>
+                                                        <div class="social-login">
+                                                            <p>- - - - - - - - - - - - - Register With - - - - - - - - - - - - - </p>
+                                                            <ul>
+                                                                <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
+                                                                <li><a href=""><i class="fa fa-google-plus"></i> Google+</a></li>
+                                                                <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </ul>
                             </li>
                         </ul>
@@ -70,43 +126,56 @@
         <div class="container-options">
             <div class="options">
                 <!-- Single button -->
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="btn-group moviesButton">
+                    <button type="button" class="btn btn-default dropdown-toggle btn-block buttonMovies" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Movies <span class="caret"></span>
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                    <ul class="dropdown-menu movieDropdown">
+                        <li><a href="#">Top Box Office</a></li>
+                        <li><a href="#">Showtimes</a></li>
+                        <li><a href="#">Genre</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">Tickets</a></li>
                     </ul>
                 </div>
 
                 <!-- Single button -->
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Music <span class="caret"></span>
+                <div class="btn-group musicButton">
+                    <button type="button" class="btn btn-default dropdown-toggle btn-block buttonMusic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Music <span class="caret caret-right"></span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Artist</a></li>
+                        <li><a href="#">Genre</a></li>
+                        <li><a href="#">Performance Date</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">Tickets</a></li>
                     </ul>
                 </div>
 
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="btn-group sportsButton">
+                    <button type="button" class="btn btn-default dropdown-toggle btn-block buttonSports" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Sports <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Football</a></li>
+                        <li><a href="#">Basketball</a></li>
+                        <li><a href="#">Hockey</a></li>
+                        <li><a href="#">Baseball</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">Tickets</a></li>
+                    </ul>
+                </div>
+
+                <div class="btn-group outdoorsButton">
+                    <button type="button" class="btn btn-default dropdown-toggle btn-block buttonOutdoors" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Outdoors <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Hiking</a></li>
+                        <li><a href="#">Camping</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Tickets</a></li>
                     </ul>
                 </div>
             </div>
@@ -119,15 +188,11 @@
             <p class="title-register">Contact us or Register today!</p>
             <div class="container-register">
                 <div class="input-group register">
-                    <form action="" id="form">
-                            <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" id="username">
-                            <input type="text" class="form-control" placeholder="First Name" aria-describedby="basic-addon1" id="first-name">
-                            <input type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1" id="last-name">
-                            <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1" id="email">
-                            <input type="password" class="form-control" placeholder="Create Password" aria-describedby="basic-addon1" id="create-password">
-                            <input type="password" class="form-control" placeholder="Repeat Password" aria-describedby="basic-addon1" id="repeat-password"></input>
-                    </form>
-                    <!-- <span class="input-group-addon" id="basic-addon1"></span> -->          
+                    <!-- <span class="input-group-addon" id="basic-addon1"></span> -->
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" placeholder="First Name" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
                 </div>
             </div>
 
@@ -140,7 +205,7 @@
             <div class="container-submit-message">
                 <div class="input-group contact-register">
                     <button type="submit" class="btn btn-default submit">Contact</button>
-                    <button type="submit" class="btn btn-default submit" id="register-button">Register</button>
+                    <button type="submit" class="btn btn-default submit">Register</button>
                 </div>
             </div>
         </div>
@@ -171,6 +236,7 @@
             firebase.initializeApp(config);
         </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>        
         <script type="text/javascript" src="assets/javascript/app.js"></script>
     </body>
 
