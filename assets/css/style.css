@@ -23,26 +23,6 @@
     background-size: cover;
 
 }
-.htmlMovies {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    position: relative;
-    color: #fff;
-    font-size: 25px;
-
-    /* The image used */
-    background-image: url(../images/movies-montage.jpg);
-
-    /* Full height */
-    height: 100%; 
-    height: 702px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 .htmlMusic {
     padding-top: 200px;
     padding-bottom: 200px;
@@ -129,4 +109,102 @@ button {
 
 .navbar {
     background-color: #000;
+}
+
+.results-movie-header {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+
+    /* image */
+    background-image: url(../images/movies-montage.jpg);
+
+    /* Full height */
+    height: 80%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.results-music-header {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+
+    /* image */
+    background-image: url(../images/music-tomorrowland.jpg);
+
+    /* Full height */
+    height: 80%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.results-sports-header {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+
+    /* image */
+    background-image: url(../images/sports-soccer-stadium.jpg);
+
+    /* Full height */
+    height: 80%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.results-outdoors-header {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+
+    /* image */
+    background-image: url(../images/outdoors-fox-view.jpg);
+
+    /* Full height */
+    height: 80%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.results-content {
+    background-color: #fff;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color: #000;
+    font-size: 25px;
+    height: 500px;
+}
+
+.results-bar {
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+
+
 }
