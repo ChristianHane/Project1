@@ -1,4 +1,4 @@
-html {
+.htmlIndex {
     background-image: url(../images/los-angeles-day.jpg);
     background-repeat: no-repeat; 
     background-position:fixed; 
@@ -8,6 +8,37 @@ html {
     /* padding: 50px; */
     background-color: #1d1d1d
 }
+.htmlMovies {
+    background-image: url(../images/movie-montage.jpg);
+    background-repeat: no-repeat; 
+    background-position:fixed; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    height: 100%;
+    /* padding: 50px; */
+    background-color: #1d1d1d
+}
+.htmlMusic {
+    background-image: url(../images/concert.jpg);
+    background-repeat: no-repeat; 
+    background-position:fixed; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    height: 100%;
+    /* padding: 50px; */
+    background-color: #1d1d1d
+}
+.htmlSports {
+    background-image: url(../images/soccer-stadium-view.jpg);
+    background-repeat: no-repeat; 
+    background-position:fixed; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    height: 100%;
+    /* padding: 50px; */
+    background-color: #1d1d1d
+}
+
 body {
     background-color: transparent;
 }
@@ -24,6 +55,9 @@ body {
     margin-left: 70px;
     padding-right: 80px
 }
+.dropdown:hover .dropdown-menu {
+    display: block;
+    }
 /* __________________________________________________________ */
 
 
