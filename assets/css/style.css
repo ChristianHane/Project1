@@ -1,6 +1,9 @@
 .body {
     background-color: #000;
 }
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
 
 .main-header, .parallax {
     padding-top: 200px;
@@ -132,6 +135,69 @@ button {
 
 .navbar {
     background-color: #000;
+}
+
+.locationSearchBar {
+    margin-top: -110px;
+}
+
+.currentLocationDisplay {
+    text-align: center;
+    margin-top: 25px;
+    margin-right: 30px;
+}
+
+.container-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px; 
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.moviesButton {
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 120px;
+  
+}
+.buttonMovies {
+    background-color: #2e2d2d;
+    color: white;
+    height: 45px;
+}
+.musicButton {
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 120px;
+}
+.buttonMusic {
+    background-color: #2e2d2d;
+    color: white;
+    height: 45px;
+}
+.sportsButton {
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 120px;
+}
+.buttonSports {
+    background-color: #2e2d2d;
+    color: white;
+    height: 45px;
+}
+.outdoorsButton {
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 120px;
+}
+.buttonOutdoors {
+    background-color: #2e2d2d;
+    color: white;
+    height: 45px;
 }
 
 .results-movie-header {
