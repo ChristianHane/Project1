@@ -1,309 +1,137 @@
 <!DOCTYPE html>
-<html lang="en" class="htmlIndex">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Entertainment Guide</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <title>stuff-to-do</title>
+
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+        <!-- Bootstrap CSS -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+
     </head>
 
     <body>
-        <div class="container-nav">
-            <nav class="navbar navbar-default navbar-inverse">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
-                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="./index.html">EGuide</a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <!-- <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                            <li><a href="#">Link</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
-                                    aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">One more separated link</a></li>
-                                </ul>
-                            </li>
-                        </ul> -->
-                        <form class="navbar-form navbar-left">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Location:  City, State">
-                            </div>
-                            <button type="submit" class="button-search btn btn-default">Enter</button>
-                        </form>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Register</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
-                                aria-haspopup="true" aria-expanded="false">Log In <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <!-- <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">Separated link</a></li> -->
-                                    <div class="container-sign-in">
-                                        <div class="row">
-                                            <div class="col-md-4 col-md-offset-4">
-                                                <div class="form-body">
-                                                    <ul class="nav nav-tabs final-login">
-                                                        <li class="active"><a data-toggle="tab" href="#sectionA">Sign In</a></li>
-                                                        <li><a data-toggle="tab" href="#sectionB">Join us!</a></li>
-                                                    </ul>
-                                                    <div class="tab-content">
-                                                        <div id="sectionA" class="tab-pane fade in active">
-                                                            <div class="innter-form">
-                                                                <form class="sa-innate-form" method="post">
-                                                                    <label>Email Address</label>
-                                                                    <input type="text" name="username">
-                                                                    <label>Password</label>
-                                                                    <input type="password" name="password">
-                                                                    <button type="submit">Sign In</button>
-                                                                    <a href="">Forgot Password?</a>
-                                                                </form>
-                                                            </div>
-                                                            <div class="social-login">
-                                                                <p>- - - - - - - - - - - - - Sign In With - - - - - - - - - - - - - </p>
-                                                                <ul>
-                                                                    <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
-                                                                    <li><a href=""><i class="fa fa-google-plus"></i> Google+</a></li>
-                                                                    <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="clearfix"></div>
-                                                        </div>
-                                                        <div id="sectionB" class="tab-pane fade">
-                                                            <div class="innter-form">
-                                                                <form class="sa-innate-form" method="post">
-                                                                    <label>Name</label>
-                                                                    <input type="text" name="username">
-                                                                    <label>Email Address</label>
-                                                                    <input type="text" name="username">
-                                                                    <label>Password</label>
-                                                                    <input type="password" name="password">
-                                                                    <button type="submit">Join now</button>
-                                                                    <p>By clicking Join now, you agree to hifriends's User Agreement, Privacy Policy, and Cookie Policy.</p>
-                                                                </form>
-                                                            </div>
-                                                            <div class="social-login">
-                                                                <p>- - - - - - - - - - - - - Register With - - - - - - - - - - - - - </p>
-                                                                <ul>
-                                                                    <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
-                                                                    <li><a href=""><i class="fa fa-google-plus"></i> Google+</a></li>
-                                                                    <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </ul>
-                            </li>
+
+        <header>
+            <!-- Navbar-->
+             <!-- Fixed navbar -->
+            <nav class="navbar navbar-inverse bg-inversebg-inverse navbar-fixed-top">
+             <div class="container">
+              <div class="navbar-header navi">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">stuff-to-do</a>
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">Register</a></li>
+                  <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Log In <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <!--
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li class="dropdown-header">Nav header</li>
+                          <li><a href="#">Separated link</a></li>
+                          <li><a href="#">One more separated link</a></li>
+                          -->
                         </ul>
+                      </li>
+                </ul>
+              </div><!--/.nav-collapse -->
+            </div>
+          </nav>
+        </header>
+
+    
+        <div class="main-header parallax">
+            
+            <div class="container">
+                <h1 class="text-center">stuff-to-do</h1>
+
+                <p class="text-center">A new way to discover events near you.</p>
+
+            </div>
+
+            <div class="container">
+
+                    <div class="row">
+                        
+                       
+                        <form class="form-inline text-center" role="form">
+                                <div class="form-group row">
+                                  <input type="text" id="searchEvents" class="form-control form-control-lg" placeholder="City/State">
+                                  <button type="button" class="btn btn-dark"><span class="glyphicon glyphicon-search"></span></button>
+                                </div>
+                                
+                              </form>
                     </div>
-                </div>
-            </nav>
-        </div>
-        <div class="container-options">
-            <div class="options">
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle moviesButton buttonMovies" type="button" data-toggle="dropdown" data-hover="dropdown" onclick="location.href = './movies.html'">
-                        Movies <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Top Box Office</a></li>
-                        <li><a href="#">Showtimes</a></li>
-                        <li><a href="#">Genre</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Tickets</a></li>
-                        <!-- <li class="dropdown">
-                            <a href="#">One more dropdown</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li class="dropdown">
-                                    <a href="#">One more dropdown</a>
-                                    <ul class="dropdown-menu">
-                                        ...
-                                    </ul>
-                                </li>
-                                <li><a href="#">Something else here</a></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li><a href="#">Something else here</a></li>
-                        <li><a href="#">Separated link</a></li> -->
-                    </ul>
-                </div>
 
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle musicButton buttonMusic" type="button" data-toggle="dropdown" data-hover="dropdown" onclick="location.href = './music.html'">
-                        Music <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Artist</a></li>
-                        <li><a href="#">Genre</a></li>
-                        <li><a href="#">Performance Date</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Tickets</a></li>
-                        <!-- <li class="dropdown">
-                            <a href="#">One more dropdown</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li class="dropdown">
-                                    <a href="#">One more dropdown</a>
-                                    <ul class="dropdown-menu">
-                                        ...
-                                    </ul>
-                                </li>
-                                <li><a href="#">Something else here</a></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li><a href="#">Something else here</a></li>
-                        <li><a href="#">Separated link</a></li> -->
-                    </ul>
-                </div>
 
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle sportsButton buttonSports" type="button" data-toggle="dropdown" data-hover="dropdown" onclick="location.href = './sports.html'">
-                        Sports <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Football</a></li>
-                        <li><a href="#">Basketball</a></li>
-                        <li><a href="#">Hockey</a></li>
-                        <li><a href="#">Baseball</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Tickets</a></li>
-                        <!-- <li class="dropdown">
-                            <a href="#">One more dropdown</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li class="dropdown">
-                                    <a href="#">One more dropdown</a>
-                                    <ul class="dropdown-menu">
-                                        ...
-                                    </ul>
-                                </li>
-                                <li><a href="#">Something else here</a></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li><a href="#">Something else here</a></li>
-                        <li><a href="#">Separated link</a></li> -->
-                    </ul>
-                </div>
-
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle outdoorsButton buttonOutdoors" type="button" data-toggle="dropdown" data-hover="dropdown" onclick="location.href = './outdoors.html'">
-                        Outdoors <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Hiking</a></li>
-                        <li><a href="#">Camping</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Tickets</a></li>
-                        <!-- <li class="dropdown">
-                            <a href="#">One more dropdown</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li class="dropdown">
-                                    <a href="#">One more dropdown</a>
-                                    <ul class="dropdown-menu">
-                                        ...
-                                    </ul>
-                                </li>
-                                <li><a href="#">Something else here</a></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li><a href="#">Something else here</a></li>
-                        <li><a href="#">Separated link</a></li> -->
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="container-discover">
-            <div>EXPLORE YOUR CITY OR TRAVEL DESTINATION</div>
         </div>
 
-        <div class="wrap-cont-register">
-            <p class="title-register">Contact us or Register today!</p>
-            <div class="container-register">
-                <div class="input-group register">
-                    <!-- <span class="input-group-addon" id="basic-addon1"></span> -->
-                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-                    <input type="text" class="form-control" placeholder="First Name" aria-describedby="basic-addon1">
-                    <input type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1">
-                    <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
-                </div>
-            </div>
+        </div>
+        
 
-            <div class="container-submit-message">
-                <div class="input-group submit-message">
-                    <input type="text" class="form-control yourMessage" placeholder="Your message" aria-describedby="basic-addon1">
-                </div>
-            </div>
+        <div class="search-content">
+          <div class="container">
+            <h4 class="text-center">How it works:</h4>
 
-            <div class="container-submit-message">
-                <div class="input-group contact-register">
-                    <button type="submit" class="btn btn-default submit">Contact</button>
-                    <button type="submit" class="btn btn-default submit">Register</button>
-                </div>
             </div>
         </div>
 
-        <div class="wrap-cont-comp-info">
-            <div class="container-company-info">
-                <span class="company-info">Address</span>
-                <span class="company-info">EGuide@gmail.com</span>
-                <span class="company-info">Phone Number</span>
-                <span class="Eguide company-info">EGuide</span>
-            </div>
-        </div>
+
+
+
+
+
+    <!-- Firebase --> 
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+                var config = {
+                    apiKey: "AIzaSyAaeV0UKgKCyxqybax2UDg3mbxkO2Hujn8",
+                    authDomain: "project-1-things-to-do.firebaseapp.com",
+                    databaseURL: "https://project-1-things-to-do.firebaseio.com",
+                    projectId: "project-1-things-to-do",
+                    storageBucket: "project-1-things-to-do.appspot.com",
+                    messagingSenderId: "1055885943744"
+                };
+                firebase.initializeApp(config);
+    </script>
+    
+    <!-- JQuery --> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <!-- Bootstrap JS--> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>        
+    
+    <!-- Local JS -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
     
 
 
-
-        <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
-        <script>
-            // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyAaeV0UKgKCyxqybax2UDg3mbxkO2Hujn8",
-                authDomain: "project-1-things-to-do.firebaseapp.com",
-                databaseURL: "https://project-1-things-to-do.firebaseio.com",
-                projectId: "project-1-things-to-do",
-                storageBucket: "project-1-things-to-do.appspot.com",
-                messagingSenderId: "1055885943744"
-            };
-            firebase.initializeApp(config);
-        </script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>        
-        <script type="text/javascript" src="assets/javascript/app.js"></script>
-    </body>
+</body>
+    
+        <!-- <footer>
+        </footer> -->
 </html>
