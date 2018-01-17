@@ -150,6 +150,7 @@ button {
 .container-options {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 100px; 
 }
 
@@ -158,46 +159,30 @@ button {
     justify-content: space-around;
 }
 
-.moviesButton {
-    margin-right: 30px;
-    margin-left: 30px;
-    width: 120px;
-  
-}
 .buttonMovies {
-    background-color: #2e2d2d;
-    color: white;
-    height: 45px;
-}
-.musicButton {
     margin-right: 30px;
     margin-left: 30px;
-    width: 120px;
+    width: 130px;
+    height: 100px;
+
 }
 .buttonMusic {
-    background-color: #2e2d2d;
-    color: white;
-    height: 45px;
-}
-.sportsButton {
     margin-right: 30px;
     margin-left: 30px;
-    width: 120px;
+    width: 130px;
+    height: 100px;
 }
 .buttonSports {
-    background-color: #2e2d2d;
-    color: white;
-    height: 45px;
-}
-.outdoorsButton {
     margin-right: 30px;
     margin-left: 30px;
-    width: 120px;
+    width: 130px;
+    height: 100px;
 }
 .buttonOutdoors {
-    background-color: #2e2d2d;
-    color: white;
-    height: 45px;
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 130px;
+    height: 100px;
 }
 
 .results-movie-header {
