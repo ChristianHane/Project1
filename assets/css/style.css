@@ -8,14 +8,14 @@ html {
     /* padding: 50px; */
     background-color: #1d1d1d
 }
+body {
+    background-color: transparent;
+}
 
 .container-nav {
     padding: 50px;
 }
 
-body {
-    background-color: transparent;
-}
 .navbar {
     /* overflow: hidden; */
     /* position: fixed; */
@@ -27,7 +27,7 @@ body {
 /* __________________________________________________________ */
 
 
-/* form */
+/*__________________________form_____________________________ */
 .container-sign-in {
     width: 1200px;
     padding-left: 200px;
