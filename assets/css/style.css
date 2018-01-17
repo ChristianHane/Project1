@@ -23,6 +23,29 @@
     background-size: cover;
 
 }
+
+.main-secondary{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+
+    /* The image used */
+    background-image: url(../images/los-angeles-night.jpg);
+
+    /* Full height */
+    height: 100%;
+    height: 300px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
 .htmlMusic {
     padding-top: 200px;
     padding-bottom: 200px;
@@ -206,5 +229,25 @@ button {
     color: #fff;
     padding: 5px;
 
+}
 
+
+#searchEvents {
+    background-color: #fff;
+    opacity: 0.85;
+    color: #000;
+    height: 50px;
+    width: 300px;
+    border: none;
+    font-size: 25px;
+}
+.glyphicon-search {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+#cityLinks a{
+    color: #fff;
+    font-size: 18px;
 }
