@@ -9,6 +9,7 @@ per_page= is results per page set to number used
 page=1 is page to show, it is 1-indexed. can change this to flip thru results
 performers.slug=name-of-band-or-team-etc is to search performer(s) - can be used multiple times & can be either .id= or .slug= style in same query
 venue.(keys from venues)
+taxonomies param uses same modifiers as taxonomies endpoint
 !!!sorting - review docs & add later - sort by date, etc. .asc/.desc for ascending/descending
 !!!filtering - review docs & add later - sort by price, etc.
 notes about returned data object: 'The Events Response Document' section has all details
