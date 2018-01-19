@@ -5,6 +5,7 @@ limit=25 - how many results to return
 q[activities_activity_type_name_eq]=hiking - searches by activity, not sure what the options are.
 q[city_cont]=Los+Angeles - the city to search for
 q[state_cont]=California - state to search in
+q[country_cont]=United+States - country to search in. USA doesn't work for United+States, maybe use a drop-down to pick country, to limit options to things that work?
 radius=25 - radius to search in, value in miles
 */
 // activities: hiking, mountain biking,
