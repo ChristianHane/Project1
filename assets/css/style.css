@@ -1,193 +1,157 @@
-.htmlIndex {
-    background-image: url(../images/los-angeles-day.jpg);
-    background-repeat: no-repeat; 
-    background-position:fixed; 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    height: 100%;
-    /* padding: 50px; */
-    background-color: #1d1d1d
-}
-.htmlMovies {
-    background-image: url(../images/movie-montage.jpg);
-    background-repeat: no-repeat; 
-    background-position:fixed; 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    height: 100%;
-    /* padding: 50px; */
-    background-color: #1d1d1d
-}
-.htmlMusic {
-    background-image: url(../images/concert.jpg);
-    background-repeat: no-repeat; 
-    background-position:fixed; 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    height: 100%;
-    /* padding: 50px; */
-    background-color: #1d1d1d
-}
-.htmlSports {
-    background-image: url(../images/soccer-stadium-view.jpg);
-    background-repeat: no-repeat; 
-    background-position:fixed; 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    height: 100%;
-    /* padding: 50px; */
-    background-color: #1d1d1d
-}
-
-body {
-    background-color: transparent;
-}
-
-.container-nav {
-    padding: 50px;
-}
-
-.navbar {
-    /* overflow: hidden; */
-    /* position: fixed; */
-}
-.navbar-brand {
-    margin-left: 70px;
-    padding-right: 80px
+.body {
+    background-color: #000;
 }
 .dropdown:hover .dropdown-menu {
     display: block;
-    }
-/* __________________________________________________________ */
-
-
-/*__________________________form_____________________________ */
-.container-sign-in {
-    width: 1200px;
-    padding-left: 200px;
-    margin-left: -600px;
-    padding-right: -200px;
-    margin-right: -358px;
 }
 
-.form-body{
-    background:#fff;
-    padding:20px;
-}
-.login-form{
-    background:rgba(255,255,255,0.8);
-	padding:20px;
-	border-top:3px solid#3e4043;
-}
-.innter-form{
-	padding-top:20px;
-}
-.final-login li{
-	width:50%;
-}
-
-.nav-tabs {
-    border-bottom: none !important;
-}
-
-.nav-tabs>li{
-	color:#222 !important;
-}
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+.main-header, .parallax {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    position: relative;
     color: #fff;
-    background-color: #d14d42;
-    border: none !important;
-    border-bottom-color: transparent;
-	border-radius:none !important;
-}
-.nav-tabs>li>a {
-    margin-right: 2px;
-    line-height: 1.428571429;
-    border: none !important;
-    border-radius:none !important;
-	text-transform:uppercase;
-	font-size:16px;
+    font-size: 25px;
+
+    /* The image used */
+    background-image: url(../images/los-angeles-night.jpg);
+
+    /* Full height */
+    height: 100%; 
+    height: 702px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
-.social-login{
-	text-align:center;
-	font-size:12px;
-}
-.social-login p{
-	margin:15px 0;
-}
-.social-login ul{
-	margin:0;
-	padding:0;
-	list-style-type:none;
-}
-.social-login ul li{
-	width:33%;
-	float:left;
-    clear:fix;
-}
-.social-login ul li a{
-	font-size:13px;
-    color:#fff;
-	text-decoration:none;
-	padding:10px 0;
-	display:block;
-}
-.social-login ul li:nth-child(1) a{
-	background:#3b5998;
-}
-.social-login ul li:nth-child(2) a{
-	background:#e74c3d;
-}
-.social-login ul li:nth-child(3) a{
-	background:#3698d9;
-}
-.sa-innate-form input[type=text], input[type=password], input[type=file], textarea, select, email{
-    font-size:13px;
-	padding:10px;
-	border:1px solid#ccc;
-	outline:none;
-	width:100%;
-	margin:8px 0;
-}
-.sa-innate-form input[type=submit]{
-    border:1px solid#e64b3b;
-	background:#e64b3b;
-	color:#fff;
-	padding:10px 25px;
-	font-size:14px;
-	margin-top:5px;
-	}
-	.sa-innate-form input[type=submit]:hover{
-	border:1px solid#db3b2b;
-	background:#db3b2b;
-	color:#fff;
-	}
-	
-	.sa-innate-form button{
-	border:1px solid#e64b3b;
-	background:#e64b3b;
-	color:#fff;
-	padding:10px 25px;
-	font-size:14px;
-	margin-top:5px;
-	}
-	.sa-innate-form button:hover{
-	border:1px solid#db3b2b;
-	background:#db3b2b;
-	color:#fff;
-	}
-    .sa-innate-form p{
-        font-size:13px;
-        padding-top:10px;
-    }
-/* __________________________________________________________ */
+.main-secondary{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    position: relative;
+    color: #fff;
+    font-size: 25px;
 
+    /* The image used */
+    background-image: url(../images/los-angeles-night.jpg);
+
+    /* Full height */
+    height: 100%;
+    height: 300px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.htmlMusic {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+
+    /* The image used */
+    background-image: url(../images/music-tomorrowland.jpg);
+
+    /* Full height */
+    height: 100%; 
+    height: 702px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.htmlSports {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+
+    /* The image used */
+    background-image: url(../images/sports-soccer-stadium.jpg);
+
+    /* Full height */
+    height: 100%; 
+    height: 702px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.htmlOutdoors {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+
+    /* The image used */
+    background-image: url(../images/outdoors-fox-view.jpg);
+
+    /* Full height */
+    height: 100%; 
+    height: 702px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-header h1{
+    font-weight: 400;
+    font-size: 100px;
+}
+
+.main-header form {
+    padding-top: 30px;
+}
+
+.search-content {
+    height: 500px;
+    background-color: #000;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color: #fff;
+    font-size: 25px;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar {
+    background-color: #000;
+}
+
+.locationSearchBar {
+    margin-top: -110px;
+}
+
+.currentLocationDisplay {
+    text-align: center;
+    margin-top: 25px;
+    margin-right: 30px;
+}
 
 .container-options {
     display: flex;
     justify-content: center;
-    margin-top: 60px; 
+    flex-wrap: wrap;
+    margin-top: 100px; 
 }
 
 .options {
@@ -195,154 +159,154 @@ body {
     justify-content: space-around;
 }
 
-.moviesButton {
-    margin-right: 30px;
-    margin-left: 30px;
-    width: 120px;
-  
-}
 .buttonMovies {
-    background-color: #2e2d2d;
-    color: white;
-    height: 45px;
-}
-.musicButton {
     margin-right: 30px;
     margin-left: 30px;
-    width: 120px;
+    width: 130px;
+    height: 100px;
+
 }
 .buttonMusic {
-    background-color: #2e2d2d;
-    color: white;
-    height: 45px;
-}
-.sportsButton {
     margin-right: 30px;
     margin-left: 30px;
-    width: 120px;
+    width: 130px;
+    height: 100px;
 }
 .buttonSports {
-    background-color: #2e2d2d;
-    color: white;
-    height: 45px;
-}
-.outdoorsButton {
     margin-right: 30px;
     margin-left: 30px;
-    width: 120px;
+    width: 130px;
+    height: 100px;
 }
 .buttonOutdoors {
-    background-color: #2e2d2d;
-    color: white;
-    height: 45px;
-}
-
-.container-discover {
-    font-size: 200%;
-    margin-top: 550px;
-
-    display: flex;
-    justify-content: center;
-    color: #faf6f6;
-}
-
-
-/* __________________________________________________________ */
-.wrap-cont-register{
-    height: 650px;
-    margin-top: 500px;
-    background-image: url(../images/los-angeles-view.jpg);
-    background-repeat: no-repeat; 
-    background-position:fixed; 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-}
-
-.container-register {
-    display: flex;
-    justify-content: center;
-}
-
-.register {
-    width: 300px;
-    margin-top: 40px;
-}
-
-.title-register {
-    color: white;
-    font-size: 230%;
-    text-align: center;
-
-    padding-top: 50px;
-}
-
-.container-submit-message {
-    display: flex;
-    justify-content: center;
-    height: 200px;
-}
-
-.submit-message {
-    width: 550px;
-    height: 200px;
-    margin-top: 40px;
-}
-
-.yourMessage {
-    height: 170px;
-}
-
-.contact-register {
-    margin-top: 40px;
-}
-
-.submit {
-    background-color: #02f3d3;
-    border: none;
-    color: #2502c2;
-    margin-top: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
     width: 130px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-/* __________________________________________________________ */
-
-
-
-.container-company-info {
-    background-color: #2e2d2d;
-    color: white;
-    height: 240px;
-    width: 100%;
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    padding-right: 50px;
-    padding-left: 50px;
-}
-
-.company-info {
-    width: 20%;
-    height: 240px;
-    background-color: #2e2d2d;
-    margin: auto;
-    align-self: center; 
-}
-
-.Eguide {
-    background-color: #0c0c0cab;
-    width: 25%;
-}
-
-/* footer {
-    background-color: lightseagreen;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
     height: 100px;
-} */
+}
+
+.results-movie-header {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+
+    /* image */
+    background-image: url(../images/movies-montage.jpg);
+
+    /* Full height */
+    height: 80%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.results-music-header {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+
+    /* image */
+    background-image: url(../images/music-tomorrowland.jpg);
+
+    /* Full height */
+    height: 80%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.results-sports-header {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+
+    /* image */
+    background-image: url(../images/sports-soccer-stadium.jpg);
+
+    /* Full height */
+    height: 80%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.results-outdoors-header {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+
+    /* image */
+    background-image: url(../images/outdoors-fox-view.jpg);
+
+    /* Full height */
+    height: 80%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.results-content {
+    background-color: #fff;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color: #000;
+    font-size: 25px;
+    height: 500px;
+}
+
+.results-bar {
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+
+}
+
+
+#searchEvents {
+    background-color: #fff;
+    opacity: 0.85;
+    color: #000;
+    height: 50px;
+    width: 300px;
+    border: none;
+    font-size: 25px;
+}
+.glyphicon-search {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+#cityLinks {
+    padding-bottom: 20px;
+}
+
+#cityLinks a{
+    color: #fff;
+    font-size: 18px;
+}
+
+#cityLinks a:hover {
+    text-decoration: none;
+}
