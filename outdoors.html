@@ -5,7 +5,7 @@
         <title>stuff-to-do</title>
 
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style2.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
         <!-- Bootstrap CSS -->
         <!-- Latest compiled and minified CSS -->
@@ -13,13 +13,9 @@
 
 <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-
-
     </head>
 
     <body>
-
         <header>
             <!-- Navbar-->
              <!-- Fixed navbar -->
@@ -32,7 +28,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">stuff-to-do</a>
+                <a class="navbar-brand" href="index.html">stuff-to-do</a>
               </div>
               <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-left">
@@ -61,39 +57,33 @@
           </nav>
         </header>
 
-    
-        <div class="main-header parallax">
+        <div class="results-outdoors-header">
             
             <div class="container">
                 <h1 class="text-center">stuff-to-do</h1>
 
-                <p class="text-center">A new way discover events near you.</p>
+                <div id="activitiesHeader"><p class="text-center">events in <u>your city</u>.</p></div>
 
             </div>
 
-            <div class="container">
-
-                    <div class="row">
-                        
-                       
-                        <form class="form-inline text-center" role="form">
-                                <div class="form-group row">
-                                  <input type="text" id="searchEvents" class="form-control form-control-lg" placeholder="City/State">
-                                  <button type="button" class="btn btn-dark"><span class="glyphicon glyphicon-search"></span></button>
-                                </div>
-                                
-                              </form>
-                    </div>
-
-
         </div>
+
+        <div class="results-bar">
+
+              <div class="container">
+                  <h4>Results for:</h4>
+              </div>
+
+
+          </div>
 
         </div>
         
 
-        <div class="search-content">
+        <div class="results-content">
           <div class="container">
-            <h4 class="text-center">How it works:</h4>
+            <h1>Music</h1>
+            <hr>
 
             </div>
         </div>
@@ -127,11 +117,5 @@
     
     <!-- Local JS -->
     <script type="text/javascript" src="assets/javascript/app.js"></script>
-    
-
-
 </body>
-    
-        <!-- <footer>
-        </footer> -->
 </html>
