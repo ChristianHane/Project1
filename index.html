@@ -4,16 +4,21 @@
         <meta charset="UTF-8">
         <title>stuff-to-do</title>
 
-        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 
         <!-- Bootstrap CSS -->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    </head>
+    
+        <!-- Our CSS -->
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+        <!-- Google Fonts --> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    
+      </head>
 
     <body>
         <header>
@@ -57,27 +62,28 @@
           </nav>
         </header>
 
-        <div class="main-header parallax">
-          <div class="container">
-              <h1 class="text-center">stuff-to-do</h1>
-              <p class="text-center">A new way to discover events near you.</p>
-          </div>
+        <div class="main-header">
 
-          <div class="container">
-            <div class="row">
-              <form class="form-inline text-center" role="form">
-                  <div class="form-group row">
+            <div class="container">
+                <h1 class="text-center">Los Angeles</h1>
+                <p class="text-center">A new way to discover events near you.</p>
+            </div>
+  
+            <div class="main-form container">
+              <div class="row">
+                <form class="form-inline text-center" role="form">
+                    <div class="form-group row">
+                        
+                      <input type="text" id="searchEvents" class="form-control form-control-lg" placeholder="City/State">
+                      <a id="searchButton" href="options.html"><i class="glyphicon glyphicon-search" ></i></a>
                       
-                    <input type="text" id="searchEvents" class="form-control form-control-lg" placeholder="City/State">
-                    <a id="searchButton" href="options.html"><i class="glyphicon glyphicon-search" ></i></a>
-                    
-                    
-                  </div>
-                </form>
-
+                      
+                    </div>
+                  </form>
+  
+              </div>
             </div>
           </div>
-        </div>
         
       <!-- Browse by city -->
 

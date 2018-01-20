@@ -1,11 +1,25 @@
+* {
+    font-family: sans-serif, 'Roboto', helvetica, arial;
+}
+
 .body {
     background-color: #000;
+    font-family: sans-serif;
 }
+
+p {
+    font-family:sans-serif, 'Roboto', helvetica, arial;
+}
+
+input {
+    font-family: sans-serif, 'Roboto', helvetica, arial;
+}
+
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-.main-header, .parallax {
+.main-header {
     padding-top: 200px;
     padding-bottom: 200px;
     position: relative;
@@ -26,6 +40,51 @@
     background-size: cover;
 
 }
+
+.options-header{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+
+    /* The image used */
+    background-image: url(../images/venice.jpg);
+
+    /* Full height */
+    height: 100%; 
+    height: 200px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.options-secondary{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+
+    /* The image used */
+    background-image: url(../images/venice.jpg);
+
+    /* Full height */
+    height: 100%;
+    height: 300px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
 
 .main-secondary{
     padding-top: 200px;
@@ -49,92 +108,58 @@
 
 }
 
-.htmlMusic {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    position: relative;
-    color: #fff;
-    font-size: 25px;
 
-    /* The image used */
-    background-image: url(../images/music-tomorrowland.jpg);
-
-    /* Full height */
-    height: 100%; 
-    height: 702px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.htmlSports {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    position: relative;
-    color: #fff;
-    font-size: 25px;
-
-    /* The image used */
-    background-image: url(../images/sports-soccer-stadium.jpg);
-
-    /* Full height */
-    height: 100%; 
-    height: 702px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.htmlOutdoors {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    position: relative;
-    color: #fff;
-    font-size: 25px;
-
-    /* The image used */
-    background-image: url(../images/outdoors-fox-view.jpg);
-
-    /* Full height */
-    height: 100%; 
-    height: 702px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .main-header h1{
+    padding-top: 200px;
+    padding-bottom: 10px;
     font-weight: 400;
     font-size: 100px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 }
 
-.main-header form {
+.options-header h1{
+    font-weight: 400;
+    font-size: 100px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
+    text-shadow: 2px 2px #000;
+    padding-bottom: 100px;
+}
+
+
+.main-header, .options-header form {
     padding-top: 30px;
 }
 
 .search-content {
-    height: 500px;
+    height: auto;
     background-color: #000;
     padding-top: 60px;
     padding-bottom: 60px;
     color: #fff;
     font-size: 25px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 }
+
+.options-content {
+    height: auto;
+    background-color: #000;
+    padding-bottom: 60px;
+    color: #fff;
+    font-size: 25px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
+}
+
 
 button {
     background-color: #000;
     color: #fff;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 }
 
 .navbar {
     background-color: #000;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 }
 
 .locationSearchBar {
@@ -191,6 +216,7 @@ button {
     position: relative;
     color: #fff;
     font-size: 25px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 
     /* image */
     background-image: url(../images/movies-montage.jpg);
@@ -211,6 +237,7 @@ button {
     position: relative;
     color: #fff;
     font-size: 25px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 
     /* image */
     background-image: url(../images/music-tomorrowland.jpg);
@@ -231,6 +258,7 @@ button {
     position: relative;
     color: #fff;
     font-size: 25px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 
     /* image */
     background-image: url(../images/sports-soccer-stadium.jpg);
@@ -265,6 +293,7 @@ button {
     background-size: cover;
 
 }
+
 .results-content {
     background-color: #fff;
     padding-top: 60px;
@@ -280,6 +309,10 @@ button {
     color: #fff;
     padding: 5px;
 
+}
+
+.main-form {
+    padding-top: 25px;
 }
 
 
@@ -310,3 +343,59 @@ button {
 #cityLinks a:hover {
     text-decoration: none;
 }
+
+.options-group p{
+    padding-top: 25px;
+    font-size: 18px;
+}
+/* Button backgrounds */
+
+.concerts-btn {
+    background-image: url(../images/pexels-photo-219101.jpg);
+    background-size: cover;
+
+}
+
+.sports-btn {
+    background-image: url(../images/sports-btn.jpg);
+    background-size: cover;
+
+}
+
+.outdoors-btn {
+    background-image: url(../images/outdoors-btn.jpg);
+    background-size: cover;
+
+}
+
+
+.options-card {
+    position: center;
+    border: 1px solid #000;
+    border-radius: 25px;
+    width: auto;
+    height: 300px;
+    margin: 15px;
+    margin-left: 50px;
+    text-align: center;
+
+    
+}
+
+.options-inner {
+    padding-top: 125px;
+}
+
+.options-inner a{
+    color: #fff;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.options-inner a:hover{
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
