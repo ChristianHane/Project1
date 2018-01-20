@@ -37,6 +37,7 @@ $(document).ready(function(){
     firebase.initializeApp(config);
 
     //user create account with email
+    //submit = Join Now button 
     $("#submit").on("click", function(event){
         event.preventDefault();
         var email= $("#email").val();
