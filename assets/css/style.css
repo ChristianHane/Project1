@@ -1,6 +1,20 @@
+* {
+    font-family: sans-serif, 'Roboto', helvetica, arial;
+}
+
 .body {
     background-color: #000;
+    font-family: sans-serif;
 }
+
+p {
+    font-family:sans-serif, 'Roboto', helvetica, arial;
+}
+
+input {
+    font-family: sans-serif, 'Roboto', helvetica, arial;
+}
+
 .dropdown:hover .dropdown-menu {
     display: block;
 }
@@ -113,6 +127,7 @@
 .main-header h1{
     font-weight: 400;
     font-size: 100px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 }
 
 .main-header form {
@@ -126,15 +141,18 @@
     padding-bottom: 60px;
     color: #fff;
     font-size: 25px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 }
 
 button {
     background-color: #000;
     color: #fff;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 }
 
 .navbar {
     background-color: #000;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 }
 
 .locationSearchBar {
@@ -191,6 +209,7 @@ button {
     position: relative;
     color: #fff;
     font-size: 25px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 
     /* image */
     background-image: url(../images/movies-montage.jpg);
@@ -211,6 +230,7 @@ button {
     position: relative;
     color: #fff;
     font-size: 25px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 
     /* image */
     background-image: url(../images/music-tomorrowland.jpg);
@@ -231,6 +251,7 @@ button {
     position: relative;
     color: #fff;
     font-size: 25px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 
     /* image */
     background-image: url(../images/sports-soccer-stadium.jpg);
