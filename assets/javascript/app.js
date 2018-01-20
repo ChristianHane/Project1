@@ -1,28 +1,4 @@
-var database = firebase.database();
-
-// $("#register-button").on("click", function(){
-//     var newUser = {
-//         userName: $("#username").val(),
-//         firstName: $("#first-name").val(),
-//         lastName: $("#last-name").val(),
-//         email: $("#email").val(),
-//         createPassword: $("#create-password").val(),
-//         repeatPassword: $("#repeat-password").val(),
-//     }
-//     if(newUser.createPassword === newUser.repeatPassword){
-//         database.ref("users").update({
-//             [newUser.userName]: {
-//                 "firstName": newUser.firstName,
-//                 "lastName": newUser.lastName,
-//                 "email": newUser.email,
-//                 "password": newUser.createPassword,
-//             }
-//         })
-//         document.getElementById("form").reset();
-//     }else{
-//         $("#submit-name").text("Passwords do not match.");
-//     }
-// })
+var database;
 
 $(document).ready(function(){
     // Initialize Firebase
@@ -35,6 +11,7 @@ $(document).ready(function(){
         messagingSenderId: "459604740117"
     };
     firebase.initializeApp(config);
+    database = firebase.database();
 
     //user create account with email
     //submit = Join Now button 
@@ -128,3 +105,41 @@ $(document).ready(function(){
         // ...
     });
 });
+
+$("#searchButton").on("click", function(event) {
+    event.preventDefault();
+    
+    var cityState = $("#searchEvents").val();
+    $("#searchEvents").val("");
+
+    $("#no-results").empty();
+    $("#searchEvents").val()
+    console.log(cityState);
+
+    var queryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + cityState + "&key=AIzaSyBziF4Fc3JyyFZY3LJ0gOEOtV7W1fqZcpk";
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).done(function(data) {
+        console.log(data);
+
+        if(data.status === "ZERO_RESULTS"){
+            $("#no-results").text("Sorry no results were found, please try agian.");
+            console.log("Sorry no results were found, please try agian.");
+        } else{
+            var lat = data.results[0].geometry.location.lat;
+            var lng = data.results[0].geometry.location.lng;
+            var location = data.results[0].formatted_address;
+            
+            if (typeof(Storage) !== "undefined") {
+                localStorage.setItem("location", location);
+                localStorage.setItem("lat", lat);
+                localStorage.setItem("lng", lng);
+            } else {
+                // Sorry! No Web Storage support..
+            }
+            console.log(lat);
+            console.log(lng);
+        }
+    });
+})
