@@ -145,6 +145,7 @@ input {
     height: auto;
     background-color: #000;
     padding-bottom: 60px;
+    padding-top: 20px;
     color: #fff;
     font-size: 25px;
     font-family: sans-serif, 'Roboto', helvetica, arial;
