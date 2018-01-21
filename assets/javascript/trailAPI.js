@@ -1,15 +1,3 @@
-// trailAPI action
-/*
-notes on query string params:
-limit=25 - how many results to return
-q[activities_activity_type_name_eq]=hiking - searches by activity, not sure what the options are.
-q[city_cont]=Los+Angeles - the city to search for
-q[state_cont]=California - state to search in
-q[country_cont]=United+States - country to search in. USA doesn't work for United+States, maybe use a drop-down to pick country, to limit options to things that work?
-radius=25 - radius to search in, value in miles
-*/
-// activities: hiking, mountain biking,
-
 $("#search-butt").on("click", function(event) {
     event.preventDefault();
     var lat = localStorage.getItem("lat");
@@ -18,7 +6,7 @@ $("#search-butt").on("click", function(event) {
 
     console.log(lat);
     console.log(lng);
-    var trailsURL = "https://trailapi-trailapi.p.mashape.com/?lat=" + lat + "&lon=" + lng + "&limit=25&q[activities_activity_type_name_eq]=hiking&radius=" + radius;
+    var trailsURL = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + search + "&location=42.3675294,-71.186966&radius=5000&key=AIzaSyBBx-fTMyEih3dDWIEQIVOkSYPYT0G8Sss";
     $.ajax({
         url: trailsURL,
         method: 'GET',

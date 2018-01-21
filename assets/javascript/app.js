@@ -1,5 +1,18 @@
 var database;
 
+var userLocation;
+
+navigator.geolocation.getCurrentPosition(function(location) {
+    console.log('GOT LOCATION');
+    var latitude = location.coords.latitude;
+    var longitude = location.coords.longitude;
+    userLocation = new google.maps.LatLng(latitude,longitude);
+}, function(err) {
+    console.log(err);
+}, {
+    timeout: 10000
+});
+
 $(document).ready(function(){
     // Initialize Firebase
     var config = {
