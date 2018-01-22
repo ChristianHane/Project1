@@ -17,7 +17,7 @@ VENUES Endpoint = https://api.seatgeek.com/2/venues
 PERFORMERS Endpoint = https://api.seatgeek.com/2/performers
 can be used to get performer info. links to spotify/lastFM, etc.
 */
-
+/*
 var rangeUserInput = 0; // get this val from an input box
 var zipUserInput = 00000; // for zip code entry from input box
 var miOrKm = ''; // mi or km for range units
@@ -41,9 +41,35 @@ $('searchButton').on('click', function(event) {
     // query string concatenated
     var urlString = endpoint + client_id + (locationIP || locationZip) + range + resultsPerPage + pageNumber + performerSelection;
 })
+*/
+// everything above here is nasty
+
+
+// just to test actually posting stuff to sports.html page
+// need to rework this to incorporate user input into queryString
+// just using LA Kings tester query for now
+// posting to page successfully - not pretty lookin though
 $.ajax({
-    url: 'https://api.seatgeek.com/2/events?client_id=MTAyNzk5MDR8MTUxNTg4MDMzMi4wOA&geoip=true&range=25mi&per_page=25&page=1&performers.slug=los-angeles-kings', // make this = urlString later
+    // make this = urlString later
+    url: 'https://api.seatgeek.com/2/events?client_id=MTAyNzk5MDR8MTUxNTg4MDMzMi4wOA&geoip=true&range=25mi&per_page=25&page=1&performers.slug=los-angeles-kings',
     method: 'GET',
-}).done(function(data) {
-    console.log(data);
+}).done(function(response) {
+    console.log(response);
+    var sportsEvents = response.events;
+    console.log(sportsEvents);
+
+    for(var i = 0; i < sportsEvents.length; i++) {
+        var sportsInfo = $('<p>');
+        // remove <br> later & just style w/ CSS
+        sportsInfo.append('<p>' + '<br>' + 'Event Type: ' + sportsEvents[i].type + '</p>');
+        sportsInfo.append('<p>' + 'Event: ' + sportsEvents[i].title + '</p>');
+        sportsInfo.append('<p>' + 'Local Start Time: ' + sportsEvents[i].datetime_local + '</p>');
+        sportsInfo.append('<p>' + 'Venue Name: ' + sportsEvents[i].venue.name + '</p>');
+        sportsInfo.append('<p>' + 'Address: ' + sportsEvents[i].venue.address + '\, ' + sportsEvents[i].venue.extended_address + '</p>');
+        sportsInfo.append('<p>' + 'Location lat: ' + sportsEvents[i].venue.location.lat + '\, lon: ' + sportsEvents[i].venue.location.lon + '</p>');
+        sportsInfo.append('<p>' + 'Lowest Price: \$' + sportsEvents[i].stats.lowest_price + '</p>');
+        sportsInfo.append('<a href="' + sportsEvents[i].url + '">Click Here to Buy Tickets on SeatGeek</a>');
+        $('#sports-results-display-zone').append(sportsInfo);
+        console.log(sportsInfo);
+    }
 });
