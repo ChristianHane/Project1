@@ -117,59 +117,60 @@
 
             </div>
           </div>
+        </form>
+      </div>
+      </div>
+    </div>
 
-
-        </div>
-
-
-     <!-- Secondary scrolling bg -->
-
-        <div class="main-secondary"></div>
-
-
-      
-     <!-- Additional content -->
-
-        <div class="search-content">
-          <div class="container">
-            <div class="row">
-            <h4 class="text-left"></h4>
-            </div>
-            
+    <!-- Browse by city -->
+    <div class="search-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="text-left">Browse by city:</h1>
+            <hr>
+          </div>
+          <div id="cityLinks">
+            <div id="cityLinks" class="col-lg-3"><a href="#">Los Angeles</a></div>
+            <div id="cityLinks" class="col-lg-3"><a href="#">Long Beach</a></div>
+            <div id="cityLinks" class="col-lg-3"><a href="#">Orange County</a></div>
+            <div id="cityLinks" class="col-lg-3"><a href="#">San Diego</a></div>
+            <div id="cityLinks" class="col-lg-3"><a href="#">San Francisco</a></div>
+            <div id="cityLinks" class="col-lg-3"><a href="#">East Bay</a></div>
+            <div id="cityLinks" class="col-lg-3"><a href="#">San Jose</a></div>
+            <div id="cityLinks" class="col-lg-3"><a href="#">Sacramento</a></div>
+            <div id="cityLinks" class="col-lg-3"><a href="#">New York</a></div>
+            <div id="cityLinks" class="col-lg-3"><a href="#">Washington DC</a></div>
+            <div id="cityLinks" class="col-lg-3"><a href="#">Chicago</a></div>
+            <div id="cityLinks" class="col-lg-3"><a href="#">Miami</a></div>
           </div>
         </div>
+      </div>
+    </div>
 
+    <!-- Secondary scrolling bg -->
+    <div class="main-secondary"></div>
 
+    <!-- Additional content -->
+    <div class="search-content">
+      <div class="container">
+        <div class="row">
+        <h4 class="text-left"></h4>
+      </div>  
+    </div>
+  </div>
+  <!-- JQuery --> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+  <!-- Bootstrap JS--> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
 
+  <!-- im not sure what this code is? -Christian -->
+  <!-- integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>         -->
 
-    <!-- Firebase --> 
-    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-                var config = {
-                    apiKey: "AIzaSyAaeV0UKgKCyxqybax2UDg3mbxkO2Hujn8",
-                    authDomain: "project-1-things-to-do.firebaseapp.com",
-                    databaseURL: "https://project-1-things-to-do.firebaseio.com",
-                    projectId: "project-1-things-to-do",
-                    storageBucket: "project-1-things-to-do.appspot.com",
-                    messagingSenderId: "1055885943744"
-                };
-                firebase.initializeApp(config);
-    </script>
-    
-    <!-- JQuery --> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-    <!-- Bootstrap JS--> 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>        
-    
-    <!-- Local JS -->
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
-    
-
-
+  <!-- Local JS -->
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
