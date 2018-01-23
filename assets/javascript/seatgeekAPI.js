@@ -26,20 +26,20 @@ var resultsPageNumber = 1; // start @ 1 then have some way to change later
 var performerUserInput = ''; // implement a way to add multiple performers later, like the movie search classwork/giphy wall hw
 
 $('searchButton').on('click', function(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    // breaking out query string into it's constituent params
-    var endpoint = 'https://api.seatgeek.com/2/events?'; // maybe turn into an array so that VENUES or PERFORMERS or EVENTS endpoint can be chosen
-    var client_id = 'client_id=MTAyNzk5MDR8MTUxNTg4MDMzMi4wOA';
-    var locationIP = '&geoip=true'; // need to add an if/else for possible zipCode use here. make IP address use default.
-    var locationZip = '&geoip=' + zipUserInput; // pass location user input here for zipCode
-    var range = '&range=' + rangeUserInput + miOrKm;
-    var resultsPerPage = '&per_page=' + resultsPerPageUserInput;
-    var pageNumber = '&page=' + resultsPageNumber;
-    var performerSelection = '&performers.slug=' + performerUserInput;
+  // breaking out query string into it's constituent params
+  var endpoint = 'https://api.seatgeek.com/2/events?'; // maybe turn into an array so that VENUES or PERFORMERS or EVENTS endpoint can be chosen
+  var client_id = 'client_id=MTAyNzk5MDR8MTUxNTg4MDMzMi4wOA';
+  var locationIP = '&geoip=true'; // need to add an if/else for possible zipCode use here. make IP address use default.
+  var locationZip = '&geoip=' + zipUserInput; // pass location user input here for zipCode
+  var range = '&range=' + rangeUserInput + miOrKm;
+  var resultsPerPage = '&per_page=' + resultsPerPageUserInput;
+  var pageNumber = '&page=' + resultsPageNumber;
+  var performerSelection = '&performers.slug=' + performerUserInput;
 
-    // query string concatenated
-    var urlString = endpoint + client_id + (locationIP || locationZip) + range + resultsPerPage + pageNumber + performerSelection;
+  // query string concatenated
+  var urlString = endpoint + client_id + (locationIP || locationZip) + range + resultsPerPage + pageNumber + performerSelection;
 })
 */
 // everything above here is nasty
@@ -50,26 +50,26 @@ $('searchButton').on('click', function(event) {
 // just using LA Kings tester query for now
 // posting to page successfully - not pretty lookin though
 $.ajax({
-    // make this = urlString later
-    url: 'https://api.seatgeek.com/2/events?client_id=MTAyNzk5MDR8MTUxNTg4MDMzMi4wOA&geoip=true&range=25mi&per_page=25&page=1&performers.slug=los-angeles-kings',
-    method: 'GET',
+  // make this = urlString later
+  url: 'https://api.seatgeek.com/2/events?client_id=MTAyNzk5MDR8MTUxNTg4MDMzMi4wOA&geoip=true&range=25mi&per_page=25&page=1&performers.slug=los-angeles-kings',
+  method: 'GET',
 }).done(function(response) {
-    console.log(response);
-    var sportsEvents = response.events;
-    console.log(sportsEvents);
+  console.log(response);
+  var sportsEvents = response.events;
+  console.log(sportsEvents);
 
-    for(var i = 0; i < sportsEvents.length; i++) {
-        var sportsInfo = $('<p>');
-        // remove <br> later & just style w/ CSS
-        sportsInfo.append('<p>' + '<br>' + 'Event Type: ' + sportsEvents[i].type + '</p>');
-        sportsInfo.append('<p>' + 'Event: ' + sportsEvents[i].title + '</p>');
-        sportsInfo.append('<p>' + 'Local Start Time: ' + sportsEvents[i].datetime_local + '</p>');
-        sportsInfo.append('<p>' + 'Venue Name: ' + sportsEvents[i].venue.name + '</p>');
-        sportsInfo.append('<p>' + 'Address: ' + sportsEvents[i].venue.address + '\, ' + sportsEvents[i].venue.extended_address + '</p>');
-        sportsInfo.append('<p>' + 'Location lat: ' + sportsEvents[i].venue.location.lat + '\, lon: ' + sportsEvents[i].venue.location.lon + '</p>');
-        sportsInfo.append('<p>' + 'Lowest Price: \$' + sportsEvents[i].stats.lowest_price + '</p>');
-        sportsInfo.append('<a href="' + sportsEvents[i].url + '">Click Here to Buy Tickets on SeatGeek</a>');
-        $('#sports-results-display-zone').append(sportsInfo);
-        console.log(sportsInfo);
-    }
+  for(var i = 0; i < sportsEvents.length; i++) {
+    var sportsInfo = $('<p>');
+    // remove <br> later & just style w/ CSS
+    sportsInfo.append('<p>' + '<br>' + 'Event Type: ' + sportsEvents[i].type + '</p>');
+    sportsInfo.append('<p>' + 'Event: ' + sportsEvents[i].title + '</p>');
+    sportsInfo.append('<p>' + 'Local Start Time: ' + sportsEvents[i].datetime_local + '</p>');
+    sportsInfo.append('<p>' + 'Venue Name: ' + sportsEvents[i].venue.name + '</p>');
+    sportsInfo.append('<p>' + 'Address: ' + sportsEvents[i].venue.address + '\, ' + sportsEvents[i].venue.extended_address + '</p>');
+    sportsInfo.append('<p>' + 'Location lat: ' + sportsEvents[i].venue.location.lat + '\, lon: ' + sportsEvents[i].venue.location.lon + '</p>');
+    sportsInfo.append('<p>' + 'Lowest Price: \$' + sportsEvents[i].stats.lowest_price + '</p>');
+    sportsInfo.append('<a href="' + sportsEvents[i].url + '">Click Here to Buy Tickets on SeatGeek</a>');
+    $('#sports-results-display-zone').append(sportsInfo);
+    console.log(sportsInfo);
+  }
 });
