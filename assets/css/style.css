@@ -500,9 +500,7 @@ button {
 
 .results-card p{
     font-size: 14px;
-    line-height: 12px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    line-height: 20px;
 }
 
 #cityHeader h1{
