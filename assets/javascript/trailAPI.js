@@ -32,5 +32,3 @@ $("#search-butt").on("click", function(event) {
         }
     });
 })
-
-
