@@ -43,20 +43,10 @@
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
-                <!--
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                -->
               </ul>
             </li>
           </ul>
         </div>
-        <!--/.nav-collapse -->
       </div>
     </nav>
   </header>
@@ -73,13 +63,6 @@
   <div class="results-bar">
     <div class="container">
       <h4>Results for:</h4>
-      <!--
-        Outdoors
-        - Name of location
-        - Address of location
-        - Rating of location (Google ratings)
-        - More info link
-      -->
     </div>
   </div>
 
@@ -90,63 +73,35 @@
       <button class="outdoors-option" value="camping">Camping</button>
       <button class="outdoors-option" value="parks">Parks</button>
       <hr>
-      <div class="row">
-          <div class="col-lg-12">
-  
-            <!-- Results card for JS to print -->
-            <div id="resultsCard" class="card col-sm-5">
-              <div class="card-body">
-                  <h5 class="event-title"></h5>
-                  <p class="event-info">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">More Info</a>
-              </div>
-            </div>
-  
-            <!-- Another card example-->
-  
-            <div id="resultsCard" class="card col-sm-5">
-                <div class="card-body">
-                    <h5 class="event-title">Event Name</h5>
-                    <p class="event-info">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">More Info</a>
-                </div>
-              </div>
-    
-  
-            <!-- Closing div for "row" and "col-lg-12"-->
-  
-          </div>
-        </div>
+      <div id="list-places"></div>
     </div>
   </div>
-
-  <div id="list-places"></div>
-
-    <!-- Browse by city -->
-    <div class="search-content">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <h5 class="text-left">Browse by city:</h5>
-              <hr>
-            </div>
-            <div id="cityLinks">
-              <div id="cityLinks" class="col-lg-3"><a href="#">Los Angeles</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">Long Beach</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">Orange County</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">San Diego</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">San Francisco</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">East Bay</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">San Jose</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">Sacramento</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">New York</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">Washington DC</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">Chicago</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">Miami</a></div>
-            </div>
-          </div>
+  
+  <!-- Browse by city -->
+  <div class="search-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h5 class="text-left">Browse by city:</h5>
+          <hr>
+        </div>
+        <div id="cityLinks">
+          <div id="cityLinks" class="col-lg-3"><a href="#">Los Angeles</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Long Beach</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Orange County</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">San Diego</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">San Francisco</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">East Bay</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">San Jose</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Sacramento</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">New York</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Washington DC</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Chicago</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Miami</a></div>
         </div>
       </div>
+    </div>
+  </div>
 
   <!-- Firebase v4.9.0 -->
   <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
