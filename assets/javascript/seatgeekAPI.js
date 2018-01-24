@@ -59,11 +59,17 @@ $.ajax({
   console.log(sportsEvents);
 
   for(var i = 0; i < sportsEvents.length; i++) {
+
+    var eventTime = sportsEvents[i].datetime_local;
+    console.log(eventTime);
+    var eventTimeConverted = moment(eventTime).format('hh:mm a, MM-DD-YYYY');
+    console.log(eventTimeConverted);
+
     var sportsInfo = $('<p>');
     // remove <br> later & just style w/ CSS
     sportsInfo.append('<p>' + '<br>' + 'Event Type: ' + sportsEvents[i].type + '</p>');
     sportsInfo.append('<p>' + 'Event: ' + sportsEvents[i].title + '</p>');
-    sportsInfo.append('<p>' + 'Local Start Time: ' + sportsEvents[i].datetime_local + '</p>');
+    sportsInfo.append('<p>' + 'Local Start Time: ' + eventTimeConverted + '</p>');
     sportsInfo.append('<p>' + 'Venue Name: ' + sportsEvents[i].venue.name + '</p>');
     sportsInfo.append('<p>' + 'Address: ' + sportsEvents[i].venue.address + '\, ' + sportsEvents[i].venue.extended_address + '</p>');
     sportsInfo.append('<p>' + 'Location lat: ' + sportsEvents[i].venue.location.lat + '\, lon: ' + sportsEvents[i].venue.location.lon + '</p>');
