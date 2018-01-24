@@ -1,17 +1,28 @@
 var database;
-
-var userLocation;
-
-navigator.geolocation.getCurrentPosition(function(location) {
-    console.log('GOT LOCATION');
-    var latitude = location.coords.latitude;
-    var longitude = location.coords.longitude;
-    userLocation = new google.maps.LatLng(latitude,longitude);
-}, function(err) {
-    console.log(err);
-}, {
-    timeout: 10000
-});
+// localStorage.clear();
+// var userLocation = localStorage.getItem("location");
+// console.log(userLocation);
+// if (userLocation === undefined) {
+//     navigator.geolocation.getCurrentPosition(function(location) {
+//         $("#searchEvents").attr("placeholder", "Got location");   
+//         $("#searchEvents").attr("disabled", false);                 
+//         localStorage.clear();
+//         console.log(location);
+//         console.log('GOT LOCATION');
+//         var latitude = location.coords.latitude;
+//         var longitude = location.coords.longitude;
+//         localStorage.setItem("location", "defined");
+//         localStorage.setItem("lat", latitude);
+//         localStorage.setItem("lng", longitude);
+//     }, function(err) {
+//         if(err.message === "User denied Geolocation") {
+//             $("#searchEvents").attr("placeholder", "City/State");
+//             $("#searchEvents").attr("disabled", false);        
+//             console.log("denied");
+//         }
+//         console.log(err);
+//     });
+// }
 
 $(document).ready(function(){
     // Initialize Firebase
@@ -121,7 +132,6 @@ $(document).ready(function(){
 
 $("#searchButton").on("click", function(event) {
     event.preventDefault();
-    
     var cityState = $("#searchEvents").val();
     $("#searchEvents").val("");
 
@@ -155,4 +165,4 @@ $("#searchButton").on("click", function(event) {
             console.log(lng);
         }
     });
-})
+});
