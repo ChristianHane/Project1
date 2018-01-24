@@ -59,18 +59,52 @@ $.ajax({
   console.log(sportsEvents);
 
   for(var i = 0; i < sportsEvents.length; i++) {
-    var sportsInfo = $('<p>');
+
+    var result = $('<div>');
+    result.addClass('card col-sm-5 results-card');
+    
+    var resultHeader = $('<h5>');
+    resultHeader.addClass = ('event-title');
+    resultHeader.text(sportsEvents[i].title);
+
+    var eventTime = sportsEvents[i].datetime_local;
+    console.log(eventTime);
+    var eventTimeConverted = moment(eventTime).format('hh:mma, MM-DD-YYYY');
+    console.log(eventTimeConverted);
+
+    var resultBody = $('<p>');
+    resultBody.addClass('event-info');
+    resultBody.append('<p>' + '<br>' + 'Event Type: ' + sportsEvents[i].type + '</p>');
+    resultBody.append('<p>' + 'Local Start Time: ' + eventTimeConverted + '</p>');
+    resultBody.append('<p>' + 'Venue Name: ' + sportsEvents[i].venue.name + '</p>');
+    resultBody.append('<p>' + 'Address: ' + sportsEvents[i].venue.address + '\, ' + sportsEvents[i].venue.extended_address + '</p>');
+    //resultBody.append('<p>' + 'Location lat: ' + sportsEvents[i].venue.location.lat + '\, lon: ' + sportsEvents[i].venue.location.lon + '</p>');
+    resultBody.append('<p>' + 'Lowest Price: \$' + sportsEvents[i].stats.lowest_price + '</p>');
+
+    var resultLink = $('<a>');
+    resultLink.attr('href', sportsEvents[i].url);
+    resultLink.addClass('btn btn-primary');
+    resultLink.text('Buy Tickets on SeatGeek!');
+    resultLink.attr('target', '_blank');
+
+    result.append(resultHeader);
+    result.append(resultBody);
+    result.append(resultLink);
+
+    $('#sports-results-display-zone').append(result);
+
+    /* var sportsInfo = $('<p>');
     // remove <br> later & just style w/ CSS
     sportsInfo.append('<p>' + '<br>' + 'Event Type: ' + sportsEvents[i].type + '</p>');
     sportsInfo.append('<p>' + 'Event: ' + sportsEvents[i].title + '</p>');
-    sportsInfo.append('<p>' + 'Local Start Time: ' + sportsEvents[i].datetime_local + '</p>');
+    sportsInfo.append('<p>' + 'Local Start Time: ' + eventTimeConverted + '</p>');
     sportsInfo.append('<p>' + 'Venue Name: ' + sportsEvents[i].venue.name + '</p>');
     sportsInfo.append('<p>' + 'Address: ' + sportsEvents[i].venue.address + '\, ' + sportsEvents[i].venue.extended_address + '</p>');
     sportsInfo.append('<p>' + 'Location lat: ' + sportsEvents[i].venue.location.lat + '\, lon: ' + sportsEvents[i].venue.location.lon + '</p>');
     sportsInfo.append('<p>' + 'Lowest Price: \$' + sportsEvents[i].stats.lowest_price + '</p>');
     sportsInfo.append('<a href="' + sportsEvents[i].url + '">Click Here to Buy Tickets on SeatGeek</a>');
     $('#sports-results-display-zone').append(sportsInfo);
-    console.log(sportsInfo);
+    console.log(sportsInfo); */
   }
 });
 
