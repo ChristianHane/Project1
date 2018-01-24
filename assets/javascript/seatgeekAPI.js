@@ -73,3 +73,13 @@ $.ajax({
     console.log(sportsInfo);
   }
 });
+
+$(document).ready(function() {
+
+
+  $('#cityHeader').text(localStorage.getItem('location'))
+
+
+});
+
+

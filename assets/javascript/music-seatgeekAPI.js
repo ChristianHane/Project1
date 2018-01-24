@@ -131,6 +131,14 @@ $.ajax({
     }
 });
 
+$(document).ready(function() {
+
+
+    $('#cityHeader').text(localStorage.getItem('location'))
+  
+  
+  });
+  
 
 // $.ajax({
 //     url: eventsURL,
