@@ -76,6 +76,7 @@ input {
 }
 
 
+
 .main-header form {
     padding-top: 30px;
 }
@@ -191,6 +192,14 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
 
+}
+
+.results-music-header h1{
+        padding-bottom: 10px;
+        font-weight: 400;
+        font-size: 100px;
+        font-family: sans-serif, 'Roboto', helvetica, arial;
+    
 }
 .results-sports-header {
     padding-top: 200px;
@@ -365,4 +374,12 @@ button {
 
 .results-card p{
     font-size: 14px;
+}
+
+#cityHeader h1{
+    padding-top: 200px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 100px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 }
