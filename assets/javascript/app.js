@@ -1,28 +1,17 @@
 var database;
-// localStorage.clear();
-// var userLocation = localStorage.getItem("location");
-// console.log(userLocation);
-// if (userLocation === undefined) {
-//     navigator.geolocation.getCurrentPosition(function(location) {
-//         $("#searchEvents").attr("placeholder", "Got location");   
-//         $("#searchEvents").attr("disabled", false);                 
-//         localStorage.clear();
-//         console.log(location);
-//         console.log('GOT LOCATION');
-//         var latitude = location.coords.latitude;
-//         var longitude = location.coords.longitude;
-//         localStorage.setItem("location", "defined");
-//         localStorage.setItem("lat", latitude);
-//         localStorage.setItem("lng", longitude);
-//     }, function(err) {
-//         if(err.message === "User denied Geolocation") {
-//             $("#searchEvents").attr("placeholder", "City/State");
-//             $("#searchEvents").attr("disabled", false);        
-//             console.log("denied");
-//         }
-//         console.log(err);
-//     });
-// }
+
+// var userLocation;
+
+//  navigator.geolocation.getCurrentPosition(function(location) {
+//     console.log('GOT LOCATION');
+//     var latitude = location.coords.latitude;
+//     var longitude = location.coords.longitude;
+//     userLocation = new google.maps.LatLng(latitude,longitude);
+// }, function(err) {
+//     console.log(err);
+// }, {
+//     timeout: 10000
+// });
 
 $(document).ready(function(){
     // Initialize Firebase
@@ -138,6 +127,7 @@ $("#searchButton").on("click", function(event) {
     $("#no-results").empty();
     $("#searchEvents").val()
     console.log(cityState);
+    var location;
 
     var queryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + cityState + "&key=AIzaSyBziF4Fc3JyyFZY3LJ0gOEOtV7W1fqZcpk";
     $.ajax({
@@ -152,7 +142,7 @@ $("#searchButton").on("click", function(event) {
         } else{
             var lat = data.results[0].geometry.location.lat;
             var lng = data.results[0].geometry.location.lng;
-            var location = data.results[0].formatted_address;
+            location = data.results[0].address_components[0].long_name;
             
             if (typeof(Storage) !== "undefined") {
                 localStorage.setItem("location", location);
@@ -163,6 +153,15 @@ $("#searchButton").on("click", function(event) {
             }
             console.log(lat);
             console.log(lng);
+           
         }
+
+        $('#cityHeader').text(location)
+
     });
+
+    $("#optionsContent").css({"display": "initial", "background-color": "#000000"});
+    $('html, body').animate({
+        scrollTop: $("#optionsContent").offset().top
+      }, 1000);
 });
