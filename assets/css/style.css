@@ -2,7 +2,7 @@
     font-family: sans-serif, 'Roboto', helvetica, arial;
 }
 
-.body {
+body {
     background-color: #000;
     font-family: sans-serif;
 }
@@ -141,9 +141,10 @@ input {
     font-family: sans-serif, 'Roboto', helvetica, arial;
 }
 
-.options-content {
+#optionsContent {
+    display: none;
     height: auto;
-    background-color: #000;
+    background-color: #000000;
     padding-bottom: 60px;
     padding-top: 20px;
     color: #fff;
@@ -374,7 +375,7 @@ button {
     position: center;
     border: 1px solid #000;
     border-radius: 25px;
-    width: auto;
+    width: 300px;
     height: 300px;
     margin: 15px;
     margin-left: 50px;

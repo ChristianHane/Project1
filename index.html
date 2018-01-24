@@ -64,7 +64,7 @@
 
   <div class="main-header">
     <div class="container">
-      <h1 class="text-center">Los Angeles</h1>
+      <h1 id="cityHeader" class="text-center">stuff-to-do</h1>
       <p class="text-center">A new way to discover events near you.</p>
     </div>
     <div class="main-form container">
@@ -72,12 +72,42 @@
         <form class="form-inline text-center" role="form">
           <div class="form-group row">     
             <input type="text" id="searchEvents" class="form-control form-control-lg" placeholder="City/State">
-            <a id="searchButton" href="options.html"><i class="glyphicon glyphicon-search" ></i></a>   
+            <a id="searchButton" href="options.html"><i class="glyphicon glyphicon-search"></i></a>   
           </div>
         </form>
       </div>
     </div>
   </div>
+
+    <!-- Show Options -->
+    <div id="optionsContent">
+        <div class="container">
+          <div class="row">
+            <div class="options-group col-lg-12">
+              <strong>browse stuff-to-do:</strong>
+              <hr>
+              <div class="options-card col-sm-3 concerts-btn">
+                <div class="options-inner">
+                  <a href="music.html">Concerts</a>
+                </div>
+              </div>
+              <div class="options-card col-sm-3 sports-btn">
+                <div class="options-inner">
+                  <a href="sports.html">Sports</a>
+                </div>
+              </div>
+              <div class="options-card col-sm-3 outdoors-btn">
+                <div class="options-inner">
+                  <a href="outdoors.html">Outdoors</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <!-- Secondary scrolling bg -->
+  <div class="main-secondary"></div>
         
   <!-- Browse by city -->
   <div class="search-content">
@@ -105,8 +135,7 @@
     </div>
   </div>
 
-  <!-- Secondary scrolling bg -->
-  <div class="main-secondary"></div>
+
   
   <!-- Additional content -->
   <div class="search-content">
@@ -125,5 +154,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <!-- Local JS -->
   <script type="text/javascript" src="assets/javascript/app.js"></script>
+  <!-- <script type="text/javascript" src="assets/javascript/options.js"></script> -->
+
 </body>
 </html>
