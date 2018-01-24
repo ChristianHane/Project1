@@ -72,20 +72,24 @@
   <div class="results-bar">
     <div class="container">
       <h4>Results for:</h4>
-      <!--
-        Sports
-        - Teams
-        - Date/time
-        - Venue
-        - Address of venue
-        - Buy tickets link
-      -->
     </div>
   </div>
 
   <div class="results-content">
     <div class="container">
       <h1>Sports</h1>
+      <button class='sportButton' value='mlb' value=''>MLB Baseball</button>
+      <button class='sportButton' value='mls'>MLS Soccer</button>
+      <button class='sportButton' value='nba'>NBA Basketball</button>
+      <button class='sportButton' value='nhl'>NHL Hockey</button>
+      <button class='sportButton' value='nfl'>NFL Football</button>
+      <button class='sportButton' value='fighting'>Fighting</button>
+      <button class='sportButton' value='golf'>Golf</button>
+      <!-- <button class='sportButton' value='ncaabb'>NCAA Basketball</button> -->
+      <!-- <button class='sportButton' value='ncaafb'>NCAA Football</button> -->
+      <!-- <button class='sportButton' value='racing'>Racing</button> -->
+      <!-- <button class='sportType' value='soccer'>Soccer</button> -->
+      <!-- <button class='sportType' value='tennis'>Tennis</button> -->
       <hr>
       <div id='sports-results-display-zone'>
         <!-- display resuts here -->
@@ -93,32 +97,31 @@
     </div>
   </div>
 
-
-    <!-- Browse by city -->
-    <div class="search-content">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <h5 class="text-left">Browse by city:</h5>
-              <hr>
-            </div>
-            <div id="cityLinks">
-              <div id="cityLinks" class="col-lg-3"><a href="#">Los Angeles</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">Long Beach</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">Orange County</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">San Diego</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">San Francisco</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">East Bay</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">San Jose</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">Sacramento</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">New York</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">Washington DC</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">Chicago</a></div>
-              <div id="cityLinks" class="col-lg-3"><a href="#">Miami</a></div>
-            </div>
-          </div>
+  <!-- Browse by city -->
+  <div class="search-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h5 class="text-left">Browse by city:</h5>
+          <hr>
+        </div>
+        <div id="cityLinks">
+          <div id="cityLinks" class="col-lg-3"><a href="#">Los Angeles</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Long Beach</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Orange County</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">San Diego</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">San Francisco</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">East Bay</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">San Jose</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Sacramento</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">New York</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Washington DC</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Chicago</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Miami</a></div>
         </div>
       </div>
+    </div>
+  </div>
 
   <!-- Firebase v4.9.0 -->
   <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
@@ -127,7 +130,7 @@
   <!-- Bootstrap JS v3.3.7 -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <!-- Moment.js link v2.20.1 -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
   <!-- Local JS -->
   <script type="text/javascript" src="assets/javascript/app.js"></script>
   <script type="text/javascript" src="assets/javascript/seatgeekAPI.js"></script>
