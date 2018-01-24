@@ -121,7 +121,6 @@ $(document).ready(function(){
 
 $("#searchButton").on("click", function(event) {
     event.preventDefault();
-    
     var cityState = $("#searchEvents").val();
     $("#searchEvents").val("");
 
@@ -167,8 +166,4 @@ $("#searchButton").on("click", function(event) {
     $('html, body').animate({
         scrollTop: $("#optionsContent").offset().top
       }, 1000);
-
-
-
-
 });
