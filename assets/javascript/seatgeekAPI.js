@@ -78,7 +78,7 @@ $.ajax({
     resultBody.append('<p>' + 'Local Start Time: ' + eventTimeConverted + '</p>');
     resultBody.append('<p>' + 'Venue Name: ' + sportsEvents[i].venue.name + '</p>');
     resultBody.append('<p>' + 'Address: ' + sportsEvents[i].venue.address + '\, ' + sportsEvents[i].venue.extended_address + '</p>');
-    resultBody.append('<p>' + 'Location lat: ' + sportsEvents[i].venue.location.lat + '\, lon: ' + sportsEvents[i].venue.location.lon + '</p>');
+    //resultBody.append('<p>' + 'Location lat: ' + sportsEvents[i].venue.location.lat + '\, lon: ' + sportsEvents[i].venue.location.lon + '</p>');
     resultBody.append('<p>' + 'Lowest Price: \$' + sportsEvents[i].stats.lowest_price + '</p>');
 
     var resultLink = $('<a>');
