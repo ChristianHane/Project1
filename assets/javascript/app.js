@@ -156,11 +156,13 @@ $("#searchButton").on("click", function(event) {
            
         }
 
+        
+
         $('#cityHeader').text(location)
 
     });
 
-    $("#optionsContent").css({"display": "initial", "background-color": "#000000"});
+    $("#optionsContent").css({"display": "initial", "background-color": "#000000", "padding": "30px"});
     $('html, body').animate({
         scrollTop: $("#optionsContent").offset().top
       }, 1000);

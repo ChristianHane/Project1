@@ -1,3 +1,5 @@
+/* Universal styling */
+
 * {
     font-family: sans-serif, 'Roboto', helvetica, arial;
 }
@@ -20,7 +22,7 @@ input {
 }
 
 .main-header {
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 200px;
     position: relative;
     color: #fff;
@@ -41,52 +43,8 @@ input {
 
 }
 
-.options-header{
-    padding-top: 200px;
-    padding-bottom: 200px;
-    position: relative;
-    color: #fff;
-    font-size: 25px;
-
-    /* The image used */
-    background-image: url(../images/venice.jpg);
-
-    /* Full height */
-    height: 100%; 
-    height: 200px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
-.options-secondary{
-    padding-top: 200px;
-    padding-bottom: 200px;
-    position: relative;
-    color: #fff;
-    font-size: 25px;
-
-    /* The image used */
-    background-image: url(../images/venice.jpg);
-
-    /* Full height */
-    height: 100%;
-    height: 300px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
-
-.main-secondary{
+/* Continued Parallax Background */
+.main-divider{
     padding-top: 200px;
     padding-bottom: 200px;
     position: relative;
@@ -109,7 +67,6 @@ input {
 }
 
 
-
 .main-header h1{
     padding-top: 200px;
     padding-bottom: 10px;
@@ -118,16 +75,8 @@ input {
     font-family: sans-serif, 'Roboto', helvetica, arial;
 }
 
-.options-header h1{
-    font-weight: 400;
-    font-size: 100px;
-    font-family: sans-serif, 'Roboto', helvetica, arial;
-    text-shadow: 2px 2px #000;
-    padding-bottom: 100px;
-}
 
-
-.main-header, .options-header form {
+.main-header form {
     padding-top: 30px;
 }
 
@@ -136,17 +85,6 @@ input {
     background-color: #000;
     padding-top: 60px;
     padding-bottom: 60px;
-    color: #fff;
-    font-size: 25px;
-    font-family: sans-serif, 'Roboto', helvetica, arial;
-}
-
-#optionsContent {
-    display: none;
-    height: auto;
-    background-color: #000000;
-    padding-bottom: 60px;
-    padding-top: 20px;
     color: #fff;
     font-size: 25px;
     font-family: sans-serif, 'Roboto', helvetica, arial;
@@ -302,7 +240,7 @@ button {
     padding-bottom: 60px;
     color: #000;
     font-size: 25px;
-    height: 500px;
+    height: auto;
 }
 
 .results-bar {
@@ -334,17 +272,35 @@ button {
 }
 
 #cityLinks {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 #cityLinks a{
     color: #fff;
-    font-size: 18px;
+    font-size: 12px;
 }
 
 #cityLinks a:hover {
     text-decoration: none;
 }
+
+/* Options Div */
+
+#optionsContent {
+    display: none;
+    height: auto;
+    background-color: #000000;
+    padding-bottom: 60px;
+    padding-top: 30px;
+    color: #fff;
+    font-size: 25px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
+}
+
+#optionsContent a:hover {
+    text-decoration: none;
+}
+
 
 .options-group p{
     padding-top: 25px;
@@ -386,24 +342,15 @@ button {
 
 .options-inner {
     padding-top: 125px;
-}
-
-.options-inner a{
     color: #fff;
     font-weight: bolder;
     font-size: 30px;
 }
 
-.options-inner a:hover{
-    color: #000;
-    font-weight: bold;
-    text-decoration: none;
-
-}
 
 /* Results Card */
 
-#resultsCard {
+.results-card {
     border: 1px solid #000;
     border-radius: 25px;
     margin-left: 25px;
@@ -411,11 +358,11 @@ button {
     padding: 20px;
 }
 
-#resultsCard h5{
+.results-card h5{
     font-size: 25px;
     font-weight: bold;
 }
 
-#resultsCard p{
+.results-card p{
     font-size: 14px;
 }
