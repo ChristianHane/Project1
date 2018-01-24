@@ -240,7 +240,7 @@ button {
     padding-bottom: 60px;
     color: #000;
     font-size: 25px;
-    height: 500px;
+    height: auto;
 }
 
 .results-bar {
@@ -358,11 +358,11 @@ button {
     padding: 20px;
 }
 
-#resultsCard h5{
+.results-card h5{
     font-size: 25px;
     font-weight: bold;
 }
 
-#resultsCard p{
+.results-card p{
     font-size: 14px;
 }
