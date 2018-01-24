@@ -61,15 +61,15 @@ $.ajax({
   for(var i = 0; i < sportsEvents.length; i++) {
 
     var result = $('<div>');
-    result.addClass('card col-sm-5');
+    result.addClass('card col-sm-5 results-card');
     
-    var resultHeader = $('<p>');
+    var resultHeader = $('<h5>');
     resultHeader.addClass = ('event-title');
     resultHeader.text(sportsEvents[i].title);
 
     var eventTime = sportsEvents[i].datetime_local;
     console.log(eventTime);
-    var eventTimeConverted = moment(eventTime).format('hh:mm a, MM-DD-YYYY');
+    var eventTimeConverted = moment(eventTime).format('hh:mma, MM-DD-YYYY');
     console.log(eventTimeConverted);
 
     var resultBody = $('<p>');
@@ -85,6 +85,7 @@ $.ajax({
     resultLink.attr('href', sportsEvents[i].url);
     resultLink.addClass('btn btn-primary');
     resultLink.text('Buy Tickets on SeatGeek!');
+    resultLink.attr('target', '_blank');
 
     result.append(resultHeader);
     result.append(resultBody);
