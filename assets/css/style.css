@@ -86,7 +86,8 @@ input {
 }
 
 
-.main-secondary{
+/* Continued Parallax Background */
+.main-divider{
     padding-top: 200px;
     padding-bottom: 200px;
     position: relative;
@@ -107,6 +108,7 @@ input {
     background-size: cover;
 
 }
+
 
 
 
@@ -141,16 +143,6 @@ input {
     font-family: sans-serif, 'Roboto', helvetica, arial;
 }
 
-#optionsContent {
-    display: none;
-    height: auto;
-    background-color: #000000;
-    padding-bottom: 60px;
-    padding-top: 20px;
-    color: #fff;
-    font-size: 25px;
-    font-family: sans-serif, 'Roboto', helvetica, arial;
-}
 
 
 button {
@@ -334,17 +326,31 @@ button {
 }
 
 #cityLinks {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 #cityLinks a{
     color: #fff;
-    font-size: 18px;
+    font-size: 12px;
 }
 
 #cityLinks a:hover {
     text-decoration: none;
 }
+
+/* Options Div */
+
+#optionsContent {
+    display: none;
+    height: auto;
+    background-color: #000000;
+    padding-bottom: 60px;
+    padding-top: 30px;
+    color: #fff;
+    font-size: 25px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
+}
+
 
 .options-group p{
     padding-top: 25px;
