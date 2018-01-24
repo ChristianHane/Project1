@@ -46,12 +46,12 @@ $('.sportButton').on('click', function(event) {
 
       var resultBody = $('<p>');
       resultBody.addClass('event-info');
-      resultBody.append('<p>' + '<br>' + 'Event Type: ' + sportsEvents[i].type + '</p>');
-      resultBody.append('<p>' + 'Local Start Time: ' + eventTimeConverted + '</p>');
-      resultBody.append('<p>' + 'Venue Name: ' + sportsEvents[i].venue.name + '</p>');
-      resultBody.append('<p>' + 'Address: ' + sportsEvents[i].venue.address + '\, ' + sportsEvents[i].venue.extended_address + '</p>');
+      resultBody.append('<p>' + '<b>' + 'Event Type: ' + '</b>' + sportsEvents[i].type + '</p>');
+      resultBody.append('<p>' + '<b>' + 'Local Start Time: ' + '</b>' + eventTimeConverted + '</p>');
+      resultBody.append('<p>' + '<b>' + 'Venue Name: ' + '</b>' + sportsEvents[i].venue.name + '</p>');
+      resultBody.append('<p>' + '<b>' + 'Address: ' + '</b>' + sportsEvents[i].venue.address + '\, ' + sportsEvents[i].venue.extended_address + '</p>');
       // resultBody.append('<p>' + 'Location lat: ' + sportsEvents[i].venue.location.lat + '\, lon: ' + sportsEvents[i].venue.location.lon + '</p>');
-      resultBody.append('<p>' + 'Lowest Price: \$' + sportsEvents[i].stats.lowest_price + '</p>');
+      resultBody.append('<p>' + '<b>' + 'Lowest Price: ' + '</b>' + '\$' + sportsEvents[i].stats.lowest_price + '</p>');
 
       var resultLink = $('<a>');
       resultLink.attr('href', sportsEvents[i].url);
