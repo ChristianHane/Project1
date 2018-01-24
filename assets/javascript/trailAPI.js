@@ -50,4 +50,8 @@ $(".outdoors-option").on("click", function(event) {
 $(document).ready(function() {
     $('#cityHeader').text(localStorage.getItem('location'))
   });
+<<<<<<< HEAD
   
+=======
+  
+>>>>>>> annelisam
