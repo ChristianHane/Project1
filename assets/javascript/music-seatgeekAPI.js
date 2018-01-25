@@ -118,6 +118,10 @@ $.ajax({
 });
 
 
+$(document).ready(function() {
+  $('#cityHeader').text(localStorage.getItem('location'))
+});
+
 // the following code is to search by genre and location 
 
 // $("#alternative").on("click", function() {
