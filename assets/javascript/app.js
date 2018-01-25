@@ -13,36 +13,84 @@ var database;
 //     timeout: 10000
 // });
 
-$(document).ready(function () {
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBSRyLZcUwZCqIcBvv3GP2ltQ7RA_uQRTU",
-    authDomain: "test-for-auth-78f1a.firebaseapp.com",
-    databaseURL: "https://test-for-auth-78f1a.firebaseio.com",
-    projectId: "test-for-auth-78f1a",
-    storageBucket: "",
-    messagingSenderId: "459604740117"
-  };
-  firebase.initializeApp(config);
-  database = firebase.database();
+$(document).ready(function(){
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAaeV0UKgKCyxqybax2UDg3mbxkO2Hujn8",
+        authDomain: "project-1-things-to-do.firebaseapp.com",
+        databaseURL: "https://project-1-things-to-do.firebaseio.com",
+        projectId: "project-1-things-to-do",
+        storageBucket: "project-1-things-to-do.appspot.com",
+        messagingSenderId: "1055885943744"
+    };
+    firebase.initializeApp(config);
+    database = firebase.database();
 
-  //user create account with email
-  //submit = Join Now button 
-  $("#submit").on("click", function (event) {
-    event.preventDefault();
-    var email = $("#email").val();
-    var password = $("#create-password").val();
-    var repeatPassword = $("#repeat-password").val();
-    if (password === repeatPassword) {
-      firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(function (user) {
-          console.log(user);
+    //user create account with email
+    //submit = Join Now button 
+    $("#register-submit").on("click", function(event){
+        event.preventDefault();
+        var email= $("#email").val();
+        var password= $("#password").val();
+        var repeatPassword = $("#repeat-password").val();
+        if(password === repeatPassword){
+            firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then(function(user){
+                console.log(user);
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+        }
+    })
+    
+    //user login with email
+    $("#sign-in-submit").on("click", function(){
+        event.preventDefault();    
+        var email = $("#sign-in-email").val();
+        var password = $("#sign-in-password").val();
+        firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(function(user){
+            console.log(user);
         })
         .catch(function (error) {
           console.log(error);
         });
-    }
-  });
+    });
+
+    // google login
+    $("#sign-in-google").on("click", function() {
+        var provider = new firebase.auth.GoogleAuthProvider();        
+        firebase.auth().signInWithRedirect(provider);
+    });
+
+    //facebook login
+    $("#sign-in-fb").on("click", function() {
+        var provider = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().signInWithRedirect(provider);
+    });
+
+    //sign out
+    $("#sign-out").on("click", function(){
+        event.preventDefault();    
+        firebase.auth().signOut().then(function() {
+            // console.log("signed out!");
+            $(".display-user").empty();  
+        }).catch(function(error) {
+            console.log("something happened with sign out.");
+        });
+    });
+
+    //listens for changes to user sign in status
+    firebase.auth().onAuthStateChanged(function(user) {
+        if(user) {   
+            $(".display-user").empty();            
+            $(".display-user").text(user.displayName);  
+        } else{
+            $(".display-user").text();                        
+            console.log("no user!");
+        }
+    });
 
   //user login with email
   $("#sign-in").on("click", function () {
