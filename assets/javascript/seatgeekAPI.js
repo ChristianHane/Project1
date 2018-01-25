@@ -7,7 +7,6 @@ $('.sportButton').on('click', function (event) {
   $('#sports-results-display-zone').empty();
 
   var selectedTaxonomy = $(this).val();
-  console.log('sportTaxonomy clicked = ' + selectedTaxonomy);
 
   var lat = '&lat=' + localStorage.getItem('lat');
   var lon = '&lon=' + localStorage.getItem('lng');
@@ -17,7 +16,6 @@ $('.sportButton').on('click', function (event) {
   var sportType = '&taxonomies.name=' + selectedTaxonomy;
 
   var queryString = endpoint + client_id + lat + lon + range + sportType;
-  console.log('queryString = ' + queryString);
 
   // get seatGeek data
   $.ajax({
@@ -26,7 +24,6 @@ $('.sportButton').on('click', function (event) {
   }).done(function (response) {
 
     var sportsEvents = response.events;
-    console.log(sportsEvents);
 
     // loop thru events & make a card displaying important info for each event - venue, date/time, link to buy tix, etc.
     for (var i = 0; i < sportsEvents.length; i++) {
@@ -42,13 +39,21 @@ $('.sportButton').on('click', function (event) {
       var eventTime = sportsEvents[i].datetime_local;
       var eventTimeConverted = moment(eventTime).format('hh:mma, MM-DD-YYYY');
 
+      var lowPrice = sportsEvents[i].stats.lowest_price;
+      // if lowest price is null, say it's unlisted, otherwise post it
+      if (lowPrice === null) {
+        lowPrice = 'Not Listed';
+      } else {
+        lowPrice = '\$'+ lowPrice;
+      }
+
       var resultBody = $('<p>');
       resultBody.addClass('event-info');
       resultBody.append('<p>' + '<b>' + 'Event Type: ' + '</b>' + sportsEvents[i].type + '</p>');
       resultBody.append('<p>' + '<b>' + 'Local Start Time: ' + '</b>' + eventTimeConverted + '</p>');
       resultBody.append('<p>' + '<b>' + 'Venue Name: ' + '</b>' + sportsEvents[i].venue.name + '</p>');
       resultBody.append('<p>' + '<b>' + 'Address: ' + '</b>' + sportsEvents[i].venue.address + '\, ' + sportsEvents[i].venue.extended_address + '</p>');
-      resultBody.append('<p>' + '<b>' + 'Lowest Price: ' + '</b>' + '\$' + sportsEvents[i].stats.lowest_price + '</p>');
+      resultBody.append('<p>' + '<b>' + 'Lowest Price: ' + '</b>' + lowPrice + '</p>');
 
       var resultLink = $('<a>');
       resultLink.attr('href', sportsEvents[i].url);
