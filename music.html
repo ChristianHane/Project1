@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <!-- custom CSS -->
+  <!-- Our CSS -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
@@ -39,45 +39,43 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Register</a></li>
             <li class="dropdown active">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-              </a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+              
+              <!-- Dropdown menu -->
               <ul class="dropdown-menu">
-                <!-- Dropdown menu--> 
                 <div class="container container-sign-in">
-                    <div class="row">
+                  <div class="row">
                     <div class="col-md-4 col-md-offset-4">
-                    <div class="form-body">
+                      <div class="form-body">
                         <ul class="nav nav-tabs final-login">
-                            <li class="active"><a data-toggle="tab" href="#sectionA">Sign In</a></li>
-                            <li><a data-toggle="tab" href="#sectionB">Join us!</a></li>
+                          <li class="active"><a data-toggle="tab" href="#sectionA">Sign In</a></li>
+                          <li><a data-toggle="tab" href="#sectionB">Join us!</a></li>
                         </ul>
                         <div class="tab-content">
-                            <div id="sectionA" class="tab-pane fade in active">
+                          <div id="sectionA" class="tab-pane fade in active">
                             <div class="innter-form">
-                                <form class="sa-innate-form" method="post">
+                              <form class="sa-innate-form" method="post">
                                 <label>Email Address</label>
                                 <input type="text" name="username">
                                 <label>Password</label>
                                 <input type="password" name="password">
                                 <button type="submit">Sign In</button>
                                 <a href="">Forgot Password?</a>
-                                </form>
-                                </div>
-                                <div class="social-login">
-                                <hr>
-                                
-                            <ul>
+                              </form>
+                            </div>
+                            <div class="social-login">
+                              <hr>
+                              <ul>
                                 <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
                                 <li><a href=""><i class="fa fa-google-plus"></i> Google+</a></li>
                                 <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
-                                </ul>
-                                </div>
-                                <div class="clearfix"></div>
+                              </ul>
                             </div>
-                            <div id="sectionB" class="tab-pane fade">
-                          <div class="innter-form">
-                                <form class="sa-innate-form" method="post">
+                            <div class="clearfix"></div>
+                          </div>
+                          <div id="sectionB" class="tab-pane fade">
+                            <div class="innter-form">
+                              <form class="sa-innate-form" method="post">
                                 <label>Name</label>
                                 <input type="text" name="username">
                                 <label>Email Address</label>
@@ -86,56 +84,36 @@
                                 <input type="password" name="password">
                                 <button type="submit">Join now</button>
                                 <p>By clicking Join now, you agree to hifriends's User Agreement, Privacy Policy, and Cookie Policy.</p>
-                                </form>
-                                </div>
-                                <div class="social-login">
-                                <hr>
-                                <ul>
-                                  <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
-                                  <li><a href=""><i class="fa fa-google-plus"></i> Google+</a></li>
-                                  <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
-                                </ul>
-                                </div>
+                              </form>
                             </div>
-                        <!-- Dropdown menu closing--> 
+                            <div class="social-login">
+                              <hr>
+                              <ul>
+                                <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
+                                <li><a href=""><i class="fa fa-google-plus"></i> Google+</a></li>
+                                <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
+                              </ul>
+                            </div>
+                          </div>
                         </div>
-                        </div>
-                        </div>
-                        </div>
-                        </div>
-                <!--
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </ul>
             </li>
           </ul>
         </div>
-        <!-- /.nav-collapse -->
       </div>
     </nav>
   </header>
 
-  <div class="results-music-header">      
+  <div class="results-music-header">
     <div class="container">
       <h1 id="cityHeader" class="text-center">stuff-to-do</h1>
       <div id="activitiesHeader">
         <p class="text-center">browse concerts in your city.</p>
       </div>
-      <!--
-        Concerts
-        - Name of concert
-        - Artist(s)
-        - Date/time
-        - Venue
-        - Address of venue
-        - Buy tickets link
-      -->
     </div>
   </div>
 
@@ -145,28 +123,10 @@
     </div>
   </div>
 
-  <!-- Results content --> 
+  <!-- Results content -->
   <div class="results-content">
     <div class="container">
       <h1>Music</h1>
-      <!-- <div class="music-buttons-container">
-        <div class="btn-group music-buttons" role="group" aria-label="...">
-          <button type="button" class="btn btn-info music-btn" id="alternative">Alternative</button>
-          <button type="button" class="btn btn-info music-btn" id="blues">Blues</button>
-          <button type="button" class="btn btn-info music-btn" id="classical">Classical</button>
-          <button type="button" class="btn btn-info music-btn" id="electronic">Electronic</button>
-          <button type="button" class="btn btn-info music-btn" id="folk">Folk</button>
-          <button type="button" class="btn btn-info music-btn" id="hiphop">Hip-Hop</button>
-          <button type="button" class="btn btn-info music-btn" id="jazz">Jazz</button>
-          <button type="button" class="btn btn-info music-btn" id="latin">Latin</button>
-          <button type="button" class="btn btn-info music-btn" id="punk">Punk</button>
-          <button type="button" class="btn btn-info music-btn" id="rap">Rap</button>
-          <button type="button" class="btn btn-info music-btn" id="reggae">Reggae</button>
-          <button type="button" class="btn btn-info music-btn" id="rock">Rock</button>
-          <button type="button" class="btn btn-info music-btn" id="soul">Soul</button>
-          <button type="button" class="btn btn-info music-btn" id="techno">Techno</button>
-        </div>
-      </div> -->
       <hr>
       <div id="music-results"></div>
     </div>
@@ -181,18 +141,20 @@
           <hr>
         </div>
         <div id="cityLinks">
-          <div id="cityLinks" class="col-lg-3"><a href="#">Los Angeles</a></div>
-          <div id="cityLinks" class="col-lg-3"><a href="#">Long Beach</a></div>
-          <div id="cityLinks" class="col-lg-3"><a href="#">Orange County</a></div>
-          <div id="cityLinks" class="col-lg-3"><a href="#">San Diego</a></div>
-          <div id="cityLinks" class="col-lg-3"><a href="#">San Francisco</a></div>
-          <div id="cityLinks" class="col-lg-3"><a href="#">East Bay</a></div>
-          <div id="cityLinks" class="col-lg-3"><a href="#">San Jose</a></div>
-          <div id="cityLinks" class="col-lg-3"><a href="#">Sacramento</a></div>
-          <div id="cityLinks" class="col-lg-3"><a href="#">New York</a></div>
-          <div id="cityLinks" class="col-lg-3"><a href="#">Washington DC</a></div>
-          <div id="cityLinks" class="col-lg-3"><a href="#">Chicago</a></div>
-          <div id="cityLinks" class="col-lg-3"><a href="#">Miami</a></div>
+          <div id="cityLinks">
+            <div class="col-lg-3 cityLinks" value="Los Angeles"><a href="#">Los Angeles</a></div>
+            <div class="col-lg-3 cityLinks" value="Long Beach"><a href="#">Long Beach</a></div>
+            <div class="col-lg-3 cityLinks" value="Orange County"><a href="#">Orange County</a></div>
+            <div class="col-lg-3 cityLinks" value="San Diego"><a href="#">San Diego</a></div>
+            <div class="col-lg-3 cityLinks" value="San Franciso"><a href="#">San Francisco</a></div>
+            <div class="col-lg-3 cityLinks" value="East Bay"><a href="#">East Bay</a></div>
+            <div class="col-lg-3 cityLinks" value="San Jose"><a href="#">San Jose</a></div>
+            <div class="col-lg-3 cityLinks" value="Sacramento"><a href="#">Sacramento</a></div>
+            <div class="col-lg-3 cityLinks" value="New York"><a href="#">New York</a></div>
+            <div class="col-lg-3 cityLinks" value="Washington DC"><a href="#">Washington DC</a></div>
+            <div class="col-lg-3 cityLinks" value="Chicago"><a href="#">Chicago</a></div>
+            <div class="col-lg-3 cityLinks" value="Miami"><a href="#">Miami</a></div>
+          </div>
         </div>
       </div>
     </div>
@@ -200,13 +162,13 @@
 
   <!-- Firebase v4.9.0 -->
   <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-  <!-- JQuery v3.2.1 --> 
+  <!-- JQuery v3.2.1 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Bootstrap JS v3.3.7 --> 
+  <!-- Bootstrap JS v3.3.7 -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <!-- Local JS -->
+  <!-- app.js -->
   <script type="text/javascript" src="assets/javascript/app.js"></script>
+  <!-- music seatgeek API js -->
   <script type="text/javascript" src="assets/javascript/music-seatgeekAPI.js"></script>
-  
 </body>
 </html>
