@@ -20,7 +20,7 @@
 
 <body>
   <header>
-  <!-- Navbar -->
+    <!-- Navbar -->
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse bg-inversebg-inverse navbar-fixed-top">
       <div class="container">
@@ -47,110 +47,109 @@
               </a>
               <ul class="dropdown-menu">
 
-  <!-- Dropdown menu--> 
+                <!-- Dropdown menu--> 
                 <div class="container container-sign-in">
-                    <div class="row">
+                  <div class="row">
                     <div class="col-md-4 col-md-offset-4">
-                    <div class="form-body">
+                      <div class="form-body">
                         <ul class="nav nav-tabs final-login">
                             <li class="active"><a class="text-center" data-toggle="tab" href="#sectionA">Sign In</a></li>
                             <li><a class="text-center" data-toggle="tab" href="#sectionB">Register</a></li>
                         </ul>
                         <div class="tab-content">
-                          
-                            <div id="sectionA" class="tab-pane fade in active">
+                            
+                          <div id="sectionA" class="tab-pane fade in active">
                             <div class="innter-form">
-                                <form class="sa-innate-form" method="post">
-
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                              <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                              <!--EMAIL ADDRESS-->
-                                              <input id="emailInput" placeholder="email address" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
-                                          </div>
-                                      </div>
-
-                                      <div class="form-group">
-                                          <div class="input-group">
-                                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock color-blue"></i></span>
-                                                <!--EMAIL ADDRESS-->
-                                                <input id="passwordInput" placeholder="password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
-                                            </div>
-                                        </div>
+                              <form class="sa-innate-form" method="post">
 
                                 <div class="form-group">
-                                    <!--BUTTON-->
-                                    <button type="submit" class="btn btn-primary form-control">Login</button>
-                                    <span class="pull-right" style="padding:10px"><a href="#" style="size: 8px;color: #777">Forgot Password?</a></span>
+                                  <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                    <!--EMAIL ADDRESS-->
+                                    <input id="sign-in-email" placeholder="email address" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock color-blue"></i></span>
+                                    <!--sign-in-password-->
+                                    <input id="sign-in-password" placeholder="password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <!--BUTTON-->
+                                  <button type="sign-in-submit" class="btn btn-primary form-control">Login</button>
+                                  <span class="pull-right" style="padding:10px"><a href="#" style="size: 8px;color: #777">Forgot Password?</a></span>
                                 </div>
 
                                 <hr>
 
                                 <div class="social-login">
+                                  <ul>
+                                    <li><a href="#" id="sign-in-fb"><i class="fa fa-facebook"></i> Sign in with Facebook</a></li>
+                                    <li><a href="#" id="sign-in-google"><i class="fa fa-google-plus"></i> Sign in with Google+</a></li>
+                                  </ul>
+                                </div>
+
+                              </form>
+
+                              </div>
+                                <div class="clearfix"></div>
+                              </div>
+
+                              <!-- Register dropdown-->
+                              <div id="sectionB" class="tab-pane fade">
+                                <div class="innter-form">
+                                
+                                  <form class="sa-innate-form" method="post">
+
                                     
-                                    <ul>
-                                      <li><a href=""><i class="fa fa-facebook"></i> Sign in with Facebook</a></li>
-                                      <li><a href=""><i class="fa fa-google-plus"></i> Sign in with Google+</a></li>
-                                      <li><a href=""><i class="fa fa-twitter"></i> Sign in with Twitter</a></li>
-                                    </ul>
+                                  
+                                    <div class="form-group">
+                                      <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                        <!--EMAIL ADDRESS-->
+                                        <input id="email" placeholder="email address" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                                      </div>
                                     </div>
 
-                                </form>
-
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-
-                            <!-- Register dropdown-->
-                            <div id="sectionB" class="tab-pane fade">
-                          <div class="innter-form">
-                              
-                                <form class="sa-innate-form" method="post">
-
-                                  
-                                
                                     <div class="form-group">
-                                        <div class="input-group">
-                                              <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                              <!--EMAIL ADDRESS-->
-                                              <input id="emailInput" placeholder="email address" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
-                                          </div>
+                                      <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock color-blue"></i></span>
+                                        <!--pasword-->
+                                        <input id="password" placeholder="enter password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
                                       </div>
+                                    </div>
 
-                                      <div class="form-group">
-                                          <div class="input-group">
-                                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock color-blue"></i></span>
-                                                <!--EMAIL ADDRESS-->
-                                                <input id="passwordInput" placeholder="enter password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
-                                            </div>
-                                        </div>
-
-                                      <div class="form-group">
-                                          <div class="input-group">
-                                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock color-blue"></i></span>
-                                                <!--REPEAT PASSWORD-->
-                                                <input id="passwordInput" placeholder="repeat password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
-                                          </div>
+                                    <div class="form-group">
+                                      <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock color-blue"></i></span>
+                                        <!--REPEAT PASSWORD-->
+                                        <input id="repeat-password" placeholder="repeat password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
                                       </div>
+                                    </div>
 
-                                <div class="form-group">
-                                    <!--BUTTON-->
-                                    <button type="submit" class="pull-left btn btn-primary form-control">Register</button>
-                                    <p class="text-right" style="size: 8px;color: #ccc">View our <a href="#" style="color: #777">Terms &amp; Conditions</a>.</p>
-                                </div>
+                                    <div class="form-group">
+                                      <!--BUTTON-->
+                                      <button id="register-submit" type="submit" class="pull-left btn btn-primary form-control">Register</button>
+                                      <p class="text-right" style="size: 8px;color: #ccc">View our <a href="#" style="color: #777">Terms &amp; Conditions</a>.</p>
+                                    </div>
 
-                                </form>
+                                  </form>
                                 </div>
                                 <div class="clearfix"></div>
+                              </div>
+
+                              <!-- Dropdown menu closing--> 
                             </div>
-
-                        <!-- Dropdown menu closing--> 
+                          </div>
                         </div>
-                        </div>
-                        </div>
-                        </div>
-                        </div>
-
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </ul>
             </li>
           </ul>
