@@ -42,7 +42,7 @@ $(document).ready(function(){
                 console.log(error);
             });
         }
-    })
+    });
     
     //user login with email
     $("#sign-in-submit").on("click", function(){
