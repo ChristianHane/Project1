@@ -397,7 +397,7 @@ button {
 }
 
 .results-content {
-    background-color: #fff;
+    background-color:#eeeeee;
     padding-top: 60px;
     padding-bottom: 60px;
     color: #000;
@@ -513,8 +513,9 @@ button {
 /* Results Card */
 
 .results-card {
-    border: 1px solid #000;
-    border-radius: 3px;
+    border-bottom: 1px solid #777;
+    background-color: #fff;
+    border-radius: 5px;
     margin-left: 25px;
     margin-bottom: 10px;
     padding: 20px;
@@ -571,4 +572,13 @@ font-family: sans-serif, 'Roboto', helvetica, arial;
 .dropdown-menu {
     background-color:  rgba(255,255,255,0.8);
     
+}
+
+.event-info p{
+    line-height: 14px;
+}
+
+.results-btn {
+    margin-top: 15px;
+    float: right;
 }

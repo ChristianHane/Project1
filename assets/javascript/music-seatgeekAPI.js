@@ -66,7 +66,7 @@ $.ajax({
     var link = $("<a>");
     link.attr("href", data.events[i].venue.url);
     link.attr("target", "_blank");
-    link.addClass("btn btn-primary");
+    link.addClass("results-btn btn btn-info");
     link.text("More Info");
 
     result.append(header);

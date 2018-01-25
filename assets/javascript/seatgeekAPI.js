@@ -52,7 +52,7 @@ $('.sportButton').on('click', function (event) {
 
       var resultLink = $('<a>');
       resultLink.attr('href', sportsEvents[i].url);
-      resultLink.addClass('btn btn-primary');
+      resultLink.addClass('results-btn btn btn-info');
       resultLink.text('Buy Tickets on SeatGeek!');
       resultLink.attr('target', '_blank');
 

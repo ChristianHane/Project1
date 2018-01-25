@@ -38,7 +38,7 @@ $(".outdoors-option").on("click", function (event) {
 
       var link = $("<a>");
       link.attr("href", "https://www.google.com/maps/place/" + data[i].name);
-      link.addClass("btn btn-primary");
+      link.addClass("results-btn btn btn-info");
       link.html("More Info");
 
       result.append(header);
