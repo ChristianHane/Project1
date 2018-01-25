@@ -6,7 +6,7 @@
 }
 
 .form-body{
-    background-color:rgba(255,255,255,0.8);
+    background-color: transparent;
     padding:20px;
 }
 .login-form{
@@ -544,3 +544,8 @@ font-family: sans-serif, 'Roboto', helvetica, arial;
 }
 
 .color-blue {color: #0080c5;}
+
+.dropdown-menu {
+    background-color:  rgba(255,255,255,0.8);
+    
+}
