@@ -41,142 +41,536 @@ can be used to get performer info. links to spotify/lastFM, etc.
 var APIEndpoint = 'https://api.seatgeek.com/2';
 
 var eventsEndpoint = '/events';
-var performersEndpoint = '/performers';
+var performersEndpoint = 'performers';
 var venuesEndpoint = '/venues';
 
 var venueCityParameter = 'venue.city='
 var citySearch = '&q=rockford'
 
 var genre = 'genres.slug=';
+var concertTaxonomy = '&taxonomies.name=concert';
 
+var lat = '&lat=' + localStorage.getItem('lat');
+var lon = '&lon=' + localStorage.getItem('lng');
+var perPage = '&per_page=50'
 
-
-var concertTaxonomy = '&taxonomies.name=concert'
 var client_id = '&client_id=MTAyNzk5MDR8MTUxNTg4MDMzMi4wOA';
-
-https://api.seatgeek.com/2/performers?genres.slug=rock
-
  
-var eventsURL = APIEndpoint + eventsEndpoint + '?' + venueCityParameter + 'los+angeles' + concertTaxonomy + client_id;
+var eventsURL = APIEndpoint + eventsEndpoint + '?' + venueCityParameter + lat + lon + perPage + concertTaxonomy + client_id;
+
+'https://api.seatgeek.com/2/events?performers&genres.slug=rock'
+
+// apiURL: genre & city
+var alternativeURL = APIEndpoint + eventsEndpoint + '?' + performersEndpoint + '&' + genre + 'alternative' + client_id;
+var bluesURL = APIEndpoint + performersEndpoint + '?' + genre + 'blues' + client_id;
+var classicalURL = APIEndpoint + performersEndpoint + '?' + genre + 'classical' + client_id;
+var electronicURL = APIEndpoint + performersEndpoint + '?' + genre + 'electronic' + client_id;
+var folkURL = APIEndpoint + performersEndpoint + '?' + genre + 'folk' + client_id;
+var hiphopURL = APIEndpoint + performersEndpoint + '?' + genre + 'hip-hop' + client_id;
+var jazzURL = APIEndpoint + performersEndpoint + '?' + genre + 'jazz' + client_id;
+var latinURL = APIEndpoint + performersEndpoint + '?' + genre + 'latin' + client_id;
+var punkURL = APIEndpoint + performersEndpoint + '?' + genre + 'punk' + client_id;
+var rockURL = APIEndpoint + performersEndpoint + '?' + genre + 'rock' + client_id;
+var reggaeURL = APIEndpoint + performersEndpoint + '?' + genre + 'reggae' + client_id;
+var soulURL = APIEndpoint + performersEndpoint + '?' + genre + 'soul' + client_id;
+var technoURL = APIEndpoint + performersEndpoint + '?' + genre + 'techno' + client_id;
+
 
 // var performersURL = APIEndpoint + performersEndpoint + 'q=kygo' + concertTaxonomy + client_id;
-var performersRapURL = APIEndpoint + performersEndpoint + '?' + genre + 'rap' + client_id;
-var performersRockURL = APIEndpoint + performersEndpoint + '?' + genre + 'rock' + client_id;
-var performersPopURL = APIEndpoint + performersEndpoint + '?' + genre + 'pop' + client_id;
-var performersCountryURL = APIEndpoint + performersEndpoint + '?' + genre + 'country' + client_id;
+
 
 $.ajax({
-    url: eventsURL,
-    method: 'GET',
+  url: eventsURL,
+  method: 'GET',
 }).done(function(data) {
-    // console.log(data);
-    for (i = 0; i < data.events.length; i++) { 
-        var result = $("<div>");
-        result.addClass("card col-sm-5 results-card");
-        
-        var header = $("<h5>");
-        header.addClass("event-title");
-        header.text(data.events[i].title);
-        
-        var p = $("<p>");
-        p.addClass("event-info");
-        p.text("Paragraph Placeholder");
-        
-        var link = $("<a>");
-        link.attr("href", data.events[i].venue.url);
-        link.attr("target", "_blank");
-        link.addClass("btn btn-primary");
-        link.text("More Info");
+  console.log(data);
+  for (i = 0; i < data.events.length; i++) { 
+    var result = $("<div>");
+    result.addClass("card col-sm-5 results-card");
+    
+    var header = $("<h5>");
+    header.addClass("event-title");
+    header.text(data.events[i].title);
+    
+    var p = $("<p>");
+    p.addClass("event-info");
+    p.append(data.events[i].performers[0].name);
+    p.append("<br>")
+    p.append(data.events[i].venue.name);
+    p.append("<br>")
+    p.append(data.events[i].venue.address);
+    p.append("<br>")
+    p.append(data.events[i].venue.display_location);
+    
+    
+    var link = $("<a>");
+    link.attr("href", data.events[i].venue.url);
+    link.attr("target", "_blank");
+    link.addClass("btn btn-primary");
+    link.text("More Info");
 
-        result.append(header);
-        result.append(p);
-        result.append(link);
+    result.append(header);
+    result.append(p);
+    result.append(link);
 
-        $("#music-results").append(result)
-
-
-
-        // <!-- Results card for JS to print -->
-        // <!-- <div id="resultsCard" class="card col-sm-5">
-        //   <div class="card-body">
-        //       <h5 class="event-title">Event Name</h5>
-        //       <p class="event-info">With supporting text below as a natural lead-in to additional content.</p>
-        //     <a href="#" class="btn btn-primary">More Info</a>
-        //   </div>
-        // </div> -->
-        
-        
-
-        // $("#resultsCard").append("<div>").addClass("card-body");
-
-        // $(".card-body").append("<h5>").addClass("event-title");
-        // $(".event-title").append(data.events[i].title); 
-
-
-        
-        
-        // $("#main-page-results").append(data.events[i].title);   
-        // $("#main-page-results").append("<br>");   
-
-        // $("#main-page-results").append(data.events[i].venue.name);   
-        // $("#main-page-results").append("<br>");  
-        
-        // $("#main-page-results").append(data.events[i].venue.address); 
-        // $("#main-page-results").append(data.events[i].venue.display_location); 
-        // $("#main-page-results").append("<br>");   
-        // $("#main-page-results").append(data.events[i].venue.url); 
-        
-        // $("#main-page-results").append("<br>");  
-        // $("#main-page-results").append("<br>");   
-    }
+    $("#music-results").append(result)
+  }
 });
 
-$(document).ready(function() {
 
+// the following code is to search by genre and location 
 
-    $('#cityHeader').text(localStorage.getItem('location'))
-  
-  
-  });
-  
-
-// $.ajax({
-//     url: eventsURL,
+// $("#alternative").on("click", function() {
+//   $.ajax({
+//     url: 'https://api.seatgeek.com/2/performers?genres.slug=rock&client_id=MTAyNzk5MDR8MTUxNTg4MDMzMi4wOA',
 //     method: 'GET',
-// }).done(function(data) {
+//   }).done(function(data) {
 //     console.log(data);
-//     for (i = 0; i < data.events.length; i++) { 
-//         console.log(data.events[i].title);
-//         // console.log(data.events[i].venue);     
-//         $("#main-page-results").append(data.events[i].title);   
-//         $("#main-page-results").append("<br>");   
+//     $("#music-results").empty();
+  
+//     for (i = 0; i < data.performers.length; i++) { 
+//       var result = $("<div>");
+//       result.addClass("card col-sm-5 results-card");
+      
+//       var header = $("<h5>");
+//       header.addClass("event-title");
+//       header.text(data.performers[i].name);
+      
+//       var p = $("<p>");
+//       p.addClass("event-info");
+//       p.text("Paragraph Placeholder");
+      
+//       // var link = $("<a>");
+//       // link.attr("href", data.performers[i].venue.url);
+//       // link.attr("target", "_blank");
+//       // link.addClass("btn btn-primary");
+//       // link.text("More Info");
 
-//         $("#main-page-results").append(data.events[i].venue.name);   
-//         $("#main-page-results").append("<br>");  
-        
-//         $("#main-page-results").append(data.events[i].venue.address); 
-//         $("#main-page-results").append(data.events[i].venue.display_location); 
-//         $("#main-page-results").append("<br>");   
-//         $("#main-page-results").append(data.events[i].venue.url); 
-        
-//         $("#main-page-results").append("<br>");  
-//         $("#main-page-results").append("<br>");   
+//       result.append(header);
+//       result.append(p);
+//       // result.append(link);
+
+//       $("#music-results").append(result)
 //     }
+//   })
 // });
 
-// $.ajax({
-//     url: 'https://api.seatgeek.com/2/performers?genres.slug=rock' + client_id,
+// $("#blues").on("click", function() {
+//   $.ajax({
+//     url: bluesURL,
 //     method: 'GET',
-// }).done(function(data) {
-//     console.log(data);
-
-    // $("#main-page-results").append(data.events[i].title);   
+//   }).done(function(data) {
+//     // console.log(data);
+//     $("#music-results").empty();
     
+//     for (i = 0; i < data.events.length; i++) { 
+//       var result = $("<div>");
+//       result.addClass("card col-sm-5 results-card");
+      
+//       var header = $("<h5>");
+//       header.addClass("event-title");
+//       header.text(data.events[i].title);
+      
+//       var p = $("<p>");
+//       p.addClass("event-info");
+//       p.text("Paragraph Placeholder");
+      
+//       var link = $("<a>");
+//       link.attr("href", data.events[i].venue.url);
+//       link.attr("target", "_blank");
+//       link.addClass("btn btn-primary");
+//       link.text("More Info");
+
+//       result.append(header);
+//       result.append(p);
+//       result.append(link);
+
+//       $("#music-results").append(result)
+//     }
+//   })
 // });
 
-// $.ajax({
-//     url: 'https://api.seatgeek.com/2/events?q=boston+celtics',
+// $("#classical").on("click", function() {
+//   $.ajax({
+//     url: classicalURL,
 //     method: 'GET',
-// }).done(function(data) {
-//     console.log(data);
+//   }).done(function(data) {
+//     // console.log(data);
+//     $("#music-results").empty();
+    
+//     for (i = 0; i < data.events.length; i++) { 
+//       var result = $("<div>");
+//       result.addClass("card col-sm-5 results-card");
+      
+//       var header = $("<h5>");
+//       header.addClass("event-title");
+//       header.text(data.events[i].title);
+      
+//       var p = $("<p>");
+//       p.addClass("event-info");
+//       p.text("Paragraph Placeholder");
+      
+//       var link = $("<a>");
+//       link.attr("href", data.events[i].venue.url);
+//       link.attr("target", "_blank");
+//       link.addClass("btn btn-primary");
+//       link.text("More Info");
+
+//       result.append(header);
+//       result.append(p);
+//       result.append(link);
+
+//       $("#music-results").append(result)
+//     }
+//   })
+// });
+
+// $("#electronic").on("click", function() {
+//   $.ajax({
+//     url: electronicURL,
+//     method: 'GET',
+//   }).done(function(data) {
+//     // console.log(data);
+//     $("#music-results").empty();
+    
+//     for (i = 0; i < data.events.length; i++) { 
+//       var result = $("<div>");
+//       result.addClass("card col-sm-5 results-card");
+      
+//       var header = $("<h5>");
+//       header.addClass("event-title");
+//       header.text(data.events[i].title);
+      
+//       var p = $("<p>");
+//       p.addClass("event-info");
+//       p.text("Paragraph Placeholder");
+      
+//       var link = $("<a>");
+//       link.attr("href", data.events[i].venue.url);
+//       link.attr("target", "_blank");
+//       link.addClass("btn btn-primary");
+//       link.text("More Info");
+
+//       result.append(header);
+//       result.append(p);
+//       result.append(link);
+
+//       $("#music-results").append(result)
+//     }
+//   })
+// });
+
+// $("#folk").on("click", function() {
+//   $.ajax({
+//     url: folkURL,
+//     method: 'GET',
+//   }).done(function(data) {
+//     // console.log(data);
+//     $("#music-results").empty();
+    
+//     for (i = 0; i < data.events.length; i++) { 
+//       var result = $("<div>");
+//       result.addClass("card col-sm-5 results-card");
+      
+//       var header = $("<h5>");
+//       header.addClass("event-title");
+//       header.text(data.events[i].title);
+      
+//       var p = $("<p>");
+//       p.addClass("event-info");
+//       p.text("Paragraph Placeholder");
+      
+//       var link = $("<a>");
+//       link.attr("href", data.events[i].venue.url);
+//       link.attr("target", "_blank");
+//       link.addClass("btn btn-primary");
+//       link.text("More Info");
+
+//       result.append(header);
+//       result.append(p);
+//       result.append(link);
+
+//       $("#music-results").append(result)
+//     }
+//   })
+// });
+
+// $("#hiphop").on("click", function() {
+//   $.ajax({
+//     url: hiphopURL,
+//     method: 'GET',
+//   }).done(function(data) {
+//     // console.log(data);
+//     $("#music-results").empty();
+    
+//     for (i = 0; i < data.events.length; i++) { 
+//       var result = $("<div>");
+//       result.addClass("card col-sm-5 results-card");
+      
+//       var header = $("<h5>");
+//       header.addClass("event-title");
+//       header.text(data.events[i].title);
+      
+//       var p = $("<p>");
+//       p.addClass("event-info");
+//       p.text("Paragraph Placeholder");
+      
+//       var link = $("<a>");
+//       link.attr("href", data.events[i].venue.url);
+//       link.attr("target", "_blank");
+//       link.addClass("btn btn-primary");
+//       link.text("More Info");
+
+//       result.append(header);
+//       result.append(p);
+//       result.append(link);
+
+//       $("#music-results").append(result)
+//     }
+//   })
+// });
+
+// $("#jazz").on("click", function() {
+//   $.ajax({
+//     url: jazzURL,
+//     method: 'GET',
+//   }).done(function(data) {
+//     // console.log(data);
+//     $("#music-results").empty();
+    
+//     for (i = 0; i < data.events.length; i++) { 
+//       var result = $("<div>");
+//       result.addClass("card col-sm-5 results-card");
+      
+//       var header = $("<h5>");
+//       header.addClass("event-title");
+//       header.text(data.events[i].title);
+      
+//       var p = $("<p>");
+//       p.addClass("event-info");
+//       p.text("Paragraph Placeholder");
+      
+//       var link = $("<a>");
+//       link.attr("href", data.events[i].venue.url);
+//       link.attr("target", "_blank");
+//       link.addClass("btn btn-primary");
+//       link.text("More Info");
+
+//       result.append(header);
+//       result.append(p);
+//       result.append(link);
+
+//       $("#music-results").append(result)
+//     }
+//   })
+// });
+
+// $("#latin").on("click", function() {
+//   $.ajax({
+//     url: latinURL,
+//     method: 'GET',
+//   }).done(function(data) {
+//     // console.log(data);
+//     $("#music-results").empty();
+    
+//     for (i = 0; i < data.events.length; i++) { 
+//       var result = $("<div>");
+//       result.addClass("card col-sm-5 results-card");
+      
+//       var header = $("<h5>");
+//       header.addClass("event-title");
+//       header.text(data.events[i].title);
+      
+//       var p = $("<p>");
+//       p.addClass("event-info");
+//       p.text("Paragraph Placeholder");
+      
+//       var link = $("<a>");
+//       link.attr("href", data.events[i].venue.url);
+//       link.attr("target", "_blank");
+//       link.addClass("btn btn-primary");
+//       link.text("More Info");
+
+//       result.append(header);
+//       result.append(p);
+//       result.append(link);
+
+//       $("#music-results").append(result)
+//     }
+//   })
+// });
+
+// $("#punk").on("click", function() {
+//   $.ajax({
+//     url: punkURL,
+//     method: 'GET',
+//   }).done(function(data) {
+//     // console.log(data);
+//     $("#music-results").empty();
+    
+//     for (i = 0; i < data.events.length; i++) { 
+//       var result = $("<div>");
+//       result.addClass("card col-sm-5 results-card");
+      
+//       var header = $("<h5>");
+//       header.addClass("event-title");
+//       header.text(data.events[i].title);
+      
+//       var p = $("<p>");
+//       p.addClass("event-info");
+//       p.text("Paragraph Placeholder");
+      
+//       var link = $("<a>");
+//       link.attr("href", data.events[i].venue.url);
+//       link.attr("target", "_blank");
+//       link.addClass("btn btn-primary");
+//       link.text("More Info");
+
+//       result.append(header);
+//       result.append(p);
+//       result.append(link);
+
+//       $("#music-results").append(result)
+//     }
+//   })
+// });
+
+// $("#rock").on("click", function() {
+//   $.ajax({
+//     url: rockURL,
+//     method: 'GET',
+//   }).done(function(data) {
+//     // console.log(data);
+//     $("#music-results").empty();
+    
+//     for (i = 0; i < data.events.length; i++) { 
+//       var result = $("<div>");
+//       result.addClass("card col-sm-5 results-card");
+      
+//       var header = $("<h5>");
+//       header.addClass("event-title");
+//       header.text(data.events[i].title);
+      
+//       var p = $("<p>");
+//       p.addClass("event-info");
+//       p.text("Paragraph Placeholder");
+      
+//       var link = $("<a>");
+//       link.attr("href", data.events[i].venue.url);
+//       link.attr("target", "_blank");
+//       link.addClass("btn btn-primary");
+//       link.text("More Info");
+
+//       result.append(header);
+//       result.append(p);
+//       result.append(link);
+
+//       $("#music-results").append(result)
+//     }
+//   })
+// });
+
+// $("#reggae").on("click", function() {
+//   $.ajax({
+//     url: reggaeURL,
+//     method: 'GET',
+//   }).done(function(data) {
+//     // console.log(data);
+//     $("#music-results").empty();
+    
+//     for (i = 0; i < data.events.length; i++) { 
+//       var result = $("<div>");
+//       result.addClass("card col-sm-5 results-card");
+      
+//       var header = $("<h5>");
+//       header.addClass("event-title");
+//       header.text(data.events[i].title);
+      
+//       var p = $("<p>");
+//       p.addClass("event-info");
+//       p.text("Paragraph Placeholder");
+      
+//       var link = $("<a>");
+//       link.attr("href", data.events[i].venue.url);
+//       link.attr("target", "_blank");
+//       link.addClass("btn btn-primary");
+//       link.text("More Info");
+
+//       result.append(header);
+//       result.append(p);
+//       result.append(link);
+
+//       $("#music-results").append(result)
+//     }
+//   })
+// });
+
+// $("#soul").on("click", function() {
+//   $.ajax({
+//     url: soulURL,
+//     method: 'GET',
+//   }).done(function(data) {
+//     // console.log(data);
+//     $("#music-results").empty();
+    
+//     for (i = 0; i < data.events.length; i++) { 
+//       var result = $("<div>");
+//       result.addClass("card col-sm-5 results-card");
+      
+//       var header = $("<h5>");
+//       header.addClass("event-title");
+//       header.text(data.events[i].title);
+      
+//       var p = $("<p>");
+//       p.addClass("event-info");
+//       p.text("Paragraph Placeholder");
+      
+//       var link = $("<a>");
+//       link.attr("href", data.events[i].venue.url);
+//       link.attr("target", "_blank");
+//       link.addClass("btn btn-primary");
+//       link.text("More Info");
+
+//       result.append(header);
+//       result.append(p);
+//       result.append(link);
+
+//       $("#music-results").append(result)
+//     }
+//   })
+// });
+
+// $("#techno").on("click", function() {
+//   $.ajax({
+//     url: technoURL,
+//     method: 'GET',
+//   }).done(function(data) {
+//     // console.log(data);
+//     $("#music-results").empty();
+    
+//     for (i = 0; i < data.events.length; i++) { 
+//       var result = $("<div>");
+//       result.addClass("card col-sm-5 results-card");
+      
+//       var header = $("<h5>");
+//       header.addClass("event-title");
+//       header.text(data.events[i].title);
+      
+//       var p = $("<p>");
+//       p.addClass("event-info");
+//       p.text("Paragraph Placeholder");
+      
+//       var link = $("<a>");
+//       link.attr("href", data.events[i].venue.url);
+//       link.attr("target", "_blank");
+//       link.addClass("btn btn-primary");
+//       link.text("More Info");
+
+//       result.append(header);
+//       result.append(p);
+//       result.append(link);
+
+//       $("#music-results").append(result)
+//     }
+//   })
 // });

@@ -37,124 +37,89 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            
+            <li><a href="#">Register</a></li>
             <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                   <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
               </a>
               <ul class="dropdown-menu">
-<!-- Dropdown menu--> 
-  <div class="container container-sign-in">
-    <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-    <div class="form-body">
-        <ul class="nav nav-tabs final-login">
-            <li class="active"><a class="text-center" data-toggle="tab" href="#sectionA">Sign In</a></li>
-            <li><a class="text-center" data-toggle="tab" href="#sectionB">Register</a></li>
-        </ul>
-        <div class="tab-content">
-          
-            <div id="sectionA" class="tab-pane fade in active">
-            <div class="innter-form">
-                <form class="sa-innate-form" method="post">
-
-                    <div class="form-group">
-                        <div class="input-group">
-                              <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                              <!--EMAIL ADDRESS-->
-                              <input id="emailInput" placeholder="email address" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
-                          </div>
-                      </div>
-
-                      <div class="form-group">
-                          <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock color-blue"></i></span>
-                                <!--EMAIL ADDRESS-->
-                                <input id="passwordInput" placeholder="password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                <!-- Dropdown menu--> 
+                <div class="container container-sign-in">
+                    <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                    <div class="form-body">
+                        <ul class="nav nav-tabs final-login">
+                            <li class="active"><a data-toggle="tab" href="#sectionA">Sign In</a></li>
+                            <li><a data-toggle="tab" href="#sectionB">Join us!</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="sectionA" class="tab-pane fade in active">
+                            <div class="innter-form">
+                                <form class="sa-innate-form" method="post">
+                                <label>Email Address</label>
+                                <input type="text" name="username">
+                                <label>Password</label>
+                                <input type="password" name="password">
+                                <button type="submit">Sign In</button>
+                                <a href="">Forgot Password?</a>
+                                </form>
+                                </div>
+                                <div class="social-login">
+                                <hr>
+                                
+                            <ul>
+                                <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
+                                <li><a href=""><i class="fa fa-google-plus"></i> Google+</a></li>
+                                <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
+                                </ul>
+                                </div>
+                                <div class="clearfix"></div>
                             </div>
-                        </div>
-
-                <div class="form-group">
-                    <!--BUTTON-->
-                    <button type="submit" class="btn btn-primary form-control">Login</button>
-                    <span class="pull-right" style="padding:10px"><a href="#" style="size: 8px; color: #777">Forgot Password?</a></span>
-                </div>
-
-                <hr>
-
-                <div class="social-login">
-                    
-                    <ul>
-                      <li><a href=""><i class="fa fa-facebook"></i> Sign in with Facebook</a></li>
-                      <li><a href=""><i class="fa fa-google-plus"></i> Sign in with Google+</a></li>
-                      <li><a href=""><i class="fa fa-twitter"></i> Sign in with Twitter</a></li>
-                    </ul>
-                    </div>
-
-                </form>
-
-                </div>
-                <div class="clearfix"></div>
-            </div>
-
-            <!-- Register dropdown-->
-            <div id="sectionB" class="tab-pane fade">
-          <div class="innter-form">
-              
-                <form class="sa-innate-form" method="post">
-
-                  
-                
-                    <div class="form-group">
-                        <div class="input-group">
-                              <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                              <!--EMAIL ADDRESS-->
-                              <input id="emailInput" placeholder="email address" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
-                          </div>
-                      </div>
-
-                      <div class="form-group">
-                          <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock color-blue"></i></span>
-                                <!--EMAIL ADDRESS-->
-                                <input id="passwordInput" placeholder="enter password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                            <div id="sectionB" class="tab-pane fade">
+                          <div class="innter-form">
+                                <form class="sa-innate-form" method="post">
+                                <label>Name</label>
+                                <input type="text" name="username">
+                                <label>Email Address</label>
+                                <input type="text" name="username">
+                                <label>Password</label>
+                                <input type="password" name="password">
+                                <button type="submit">Join now</button>
+                                <p>By clicking Join now, you agree to hifriends's User Agreement, Privacy Policy, and Cookie Policy.</p>
+                                </form>
+                                </div>
+                                <div class="social-login">
+                                <hr>
+                                <ul>
+                                  <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
+                                  <li><a href=""><i class="fa fa-google-plus"></i> Google+</a></li>
+                                  <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
+                                </ul>
+                                </div>
                             </div>
+                        <!-- Dropdown menu closing--> 
                         </div>
-
-                      <div class="form-group">
-                          <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock color-blue"></i></span>
-                                <!--REPEAT PASSWORD-->
-                                <input id="passwordInput" placeholder="repeat password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
-                          </div>
-                      </div>
-
-                <div class="form-group">
-                    <!--BUTTON-->
-                    <button type="submit" class="pull-left btn btn-primary form-control">Register</button>
-                    <p class="text-right" style="size: 8px;color: #ccc">View our <a href="#" style="color: #777">Terms &amp; Conditions</a>.</p>
-                </div>
-
-                </form>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-
-        <!-- Dropdown menu closing--> 
-                </div>
-                </div>
-                </div>
-                </div>
-              </div>
-
-            </ul> 
-          </li>
-        </ul>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                <!--
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                -->
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.nav-collapse -->
       </div>
-<!-- /.nav-collapse -->
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
 
   <div class="results-music-header">      
     <div class="container">
@@ -184,6 +149,24 @@
   <div class="results-content">
     <div class="container">
       <h1>Music</h1>
+      <!-- <div class="music-buttons-container">
+        <div class="btn-group music-buttons" role="group" aria-label="...">
+          <button type="button" class="btn btn-info music-btn" id="alternative">Alternative</button>
+          <button type="button" class="btn btn-info music-btn" id="blues">Blues</button>
+          <button type="button" class="btn btn-info music-btn" id="classical">Classical</button>
+          <button type="button" class="btn btn-info music-btn" id="electronic">Electronic</button>
+          <button type="button" class="btn btn-info music-btn" id="folk">Folk</button>
+          <button type="button" class="btn btn-info music-btn" id="hiphop">Hip-Hop</button>
+          <button type="button" class="btn btn-info music-btn" id="jazz">Jazz</button>
+          <button type="button" class="btn btn-info music-btn" id="latin">Latin</button>
+          <button type="button" class="btn btn-info music-btn" id="punk">Punk</button>
+          <button type="button" class="btn btn-info music-btn" id="rap">Rap</button>
+          <button type="button" class="btn btn-info music-btn" id="reggae">Reggae</button>
+          <button type="button" class="btn btn-info music-btn" id="rock">Rock</button>
+          <button type="button" class="btn btn-info music-btn" id="soul">Soul</button>
+          <button type="button" class="btn btn-info music-btn" id="techno">Techno</button>
+        </div>
+      </div> -->
       <hr>
       <div id="music-results"></div>
     </div>
@@ -198,18 +181,18 @@
           <hr>
         </div>
         <div id="cityLinks">
-          <div class="col-lg-3 cityLinks" value="Los Angeles"><a href="#">Los Angeles</a></div>
-          <div class="col-lg-3 cityLinks" value="Long Beach"><a href="#">Long Beach</a></div>
-          <div class="col-lg-3 cityLinks" value="Orange County"><a href="#">Orange County</a></div>
-          <div class="col-lg-3 cityLinks" value="San Diego"><a href="#">San Diego</a></div>
-          <div class="col-lg-3 cityLinks" value="San Franciso"><a href="#">San Francisco</a></div>
-          <div class="col-lg-3 cityLinks" value="East Bay"><a href="#">East Bay</a></div>
-          <div class="col-lg-3 cityLinks" value="San Jose"><a href="#">San Jose</a></div>
-          <div class="col-lg-3 cityLinks" value="Sacramento"><a href="#">Sacramento</a></div>
-          <div class="col-lg-3 cityLinks" value="New York"><a href="#">New York</a></div>
-          <div class="col-lg-3 cityLinks" value="Washington DC"><a href="#">Washington DC</a></div>
-          <div class="col-lg-3 cityLinks" value="Chicago"><a href="#">Chicago</a></div>
-          <div class="col-lg-3 cityLinks" value="Miami"><a href="#">Miami</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Los Angeles</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Long Beach</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Orange County</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">San Diego</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">San Francisco</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">East Bay</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">San Jose</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Sacramento</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">New York</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Washington DC</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Chicago</a></div>
+          <div id="cityLinks" class="col-lg-3"><a href="#">Miami</a></div>
         </div>
       </div>
     </div>
