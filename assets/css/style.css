@@ -1,15 +1,12 @@
-/* form */
+/*form*/
 
 .container-sign-in {
     margin-left: -400px;
     margin-right: -400px;
 }
 
-body{
-    background:#efefef;
-}
 .form-body{
-    background:#fff;
+    background-color:rgba(255,255,255,0.8);
     padding:20px;
 }
 .login-form{
@@ -33,7 +30,7 @@ body{
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
     color: #fff;
-    background-color: #d14d42;
+    background-color: #0080c5;;
     border: none !important;
     border-bottom-color: transparent;
 	border-radius:none !important;
@@ -44,12 +41,13 @@ body{
     border: none !important;
     border-radius:none !important;
 	text-transform:uppercase;
-	font-size:16px;
+	font-size:14px;
 }
 
 .social-login{
 	text-align:center;
     font-size:12px;
+
 }
 .social-login p{
 	margin:15px 0;
@@ -60,27 +58,33 @@ body{
 	list-style-type:none;
 }
 .social-login ul li{
-	width:33%;
+	width: 100%;
 	float:left;
     clear:fix;
+    padding-bottom: 10px;
+    padding-right: 10px;
 }
 .social-login ul li a{
 	font-size:13px;
 	color:#fff;
 	text-decoration:none;
 	padding:10px 0;
-	display:block;
+    display:block;
+    border-radius: 5px;
 }
 .social-login ul li:nth-child(1) a{
-	background:#3b5998;
+    background:#3b5998;
+    border-radius: 5px;
 }
 .social-login ul li:nth-child(2) a{
-	background:#e74c3d;
+    background:#e74c3d;
+    border-radius: 5px;
 }
 .social-login ul li:nth-child(3) a{
-	background:#3698d9;
+    background:#3698d9;
+    border-radius: 5px;
 }
-.sa-innate-form input[type=text], input[type=password], input[type=file], textarea, select, email{
+/* .sa-innate-form input[type=text], input[type=password], input[type=file], textarea, select, email{
     font-size:13px;
 	padding:10px;
 	border:1px solid#ccc;
@@ -88,40 +92,44 @@ body{
 	width:100%;
 	margin:8px 0;
 	
-}
+} */
 .sa-innate-form input[type=submit]{
-    border:1px solid#e64b3b;
-	background:#e64b3b;
+    border:1px solid #0080c5;
+	background: #0080c5;
 	color:#fff;
 	padding:10px 25px;
 	font-size:14px;
-	margin-top:5px;
+    margin-top:5px;
+    border-radius: 5px;
 	}
 	.sa-innate-form input[type=submit]:hover{
-	border:1px solid#db3b2b;
-	background:#db3b2b;
-	color:#fff;
+    border:1px solid #0080c5;
+    background: #0080c5;
+    color:#fff;
+    border-radius: 5px;
 	}
 	
 	.sa-innate-form button{
-	border:1px solid#e64b3b;
-	background:#e64b3b;
+    border:1px solid #0080c5;
+    background: #0080c5;
 	color:#fff;
-	padding:10px 25px;
 	font-size:14px;
-	margin-top:5px;
+    margin-top:5px;
+    border-radius: 5px;
+    width: 100px;
 	}
 	.sa-innate-form button:hover{
-	border:1px solid#db3b2b;
-	background:#db3b2b;
-	color:#fff;
+    border:1px solid #0080c5;
+    background: #0080c5;
+    color:#fff;
+    border-radius: 5px;
 	}
     .sa-innate-form p{
         font-size:13px;
         padding-top:10px;
-    }
-
-/* Universal styling */
+    } 
+    
+/*Universal styling*/
 
 * {
     font-family: sans-serif, 'Roboto', helvetica, arial;
@@ -533,3 +541,6 @@ padding-bottom: 10px;
 font-weight: 400;
 font-size: 100px;
 font-family: sans-serif, 'Roboto', helvetica, arial;
+}
+
+.color-blue {color: #0080c5;}
