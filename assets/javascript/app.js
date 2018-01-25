@@ -138,7 +138,7 @@ $("#searchButton").on("click", function(event) {
 
         if(data.status === "ZERO_RESULTS"){
             $("#no-results").text("Sorry no results were found, please try agian.");
-            console.log("Sorry no results were found, please try agian.");
+            console.log("Sorry no results were found, please try again.");
         } else{
             var lat = data.results[0].geometry.location.lat;
             var lng = data.results[0].geometry.location.lng;
@@ -156,10 +156,7 @@ $("#searchButton").on("click", function(event) {
            
         }
 
-        
-
         $('#cityHeader').text(location)
-
     });
 
     $("#optionsContent").css({"display": "initial", "background-color": "#000000", "padding": "30px"});

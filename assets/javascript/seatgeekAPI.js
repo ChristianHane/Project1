@@ -9,16 +9,16 @@ $('.sportButton').on('click', function(event) {
   var selectedTaxonomy = $(this).val();
   console.log('sportTaxonomy clicked = ' + selectedTaxonomy);
 
-  // var lat = '&lat=' + localStorage.getItem('lat'); // still need to deal w/ incorporating lat/lon for location
-  // var lon = '&lon=' + localStorage.getItem('lng');
+  var lat = '&lat=' + localStorage.getItem('lat');
+  var lon = '&lon=' + localStorage.getItem('lng');
   var endpoint = 'https://api.seatgeek.com/2/events';
   var client_id = '?client_id=MTAyNzk5MDR8MTUxNTg4MDMzMi4wOA';
-  var location = '&geoip=true' //change var location = lat/lon vars from storage
-  var range = '&range=25mi'; //change to get user input - var range = '&range=' + rangeUserInput + miOrKm;
+  //var location = '&geoip=true' //change var location = lat/lon vars from storage
+  var range = '&range=100mi'; //change to get user input - var range = '&range=' + rangeUserInput + miOrKm;
   // var performerSelection = '&performers.slug=' + performerUserInput;
   var sportType = '&taxonomies.name=' + selectedTaxonomy;
 
-  var queryString = endpoint + client_id + location /* + lat + lon */ + range + sportType; // still need to incorporate lat/lon for location
+  var queryString = endpoint + client_id + /* location + */ lat + lon + range + sportType; // still need to incorporate lat/lon for location
   console.log('queryString = ' + queryString);
 
   // get seatGeek data
