@@ -1,4 +1,135 @@
-/* Universal styling */
+/*form*/
+
+.container-sign-in {
+    margin-left: -400px;
+    margin-right: -400px;
+}
+
+.form-body{
+    background-color:rgba(255,255,255,0.8);
+    padding:20px;
+}
+.login-form{
+    background:rgba(255,255,255,0.8);
+	padding:20px;
+	border-top:3px solid#3e4043;
+}
+.innter-form{
+	padding-top:20px;
+}
+.final-login li{
+	width:50%;
+}
+
+.nav-tabs {
+    border-bottom: none !important;
+}
+
+.nav-tabs>li{
+	color:#222 !important;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #fff;
+    background-color: #0080c5;;
+    border: none !important;
+    border-bottom-color: transparent;
+	border-radius:none !important;
+}
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.428571429;
+    border: none !important;
+    border-radius:none !important;
+	text-transform:uppercase;
+	font-size:14px;
+}
+
+.social-login{
+	text-align:center;
+    font-size:12px;
+
+}
+.social-login p{
+	margin:15px 0;
+}
+.social-login ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.social-login ul li{
+	width: 100%;
+	float:left;
+    clear:fix;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+.social-login ul li a{
+	font-size:13px;
+	color:#fff;
+	text-decoration:none;
+	padding:10px 0;
+    display:block;
+    border-radius: 5px;
+}
+.social-login ul li:nth-child(1) a{
+    background:#3b5998;
+    border-radius: 5px;
+}
+.social-login ul li:nth-child(2) a{
+    background:#e74c3d;
+    border-radius: 5px;
+}
+.social-login ul li:nth-child(3) a{
+    background:#3698d9;
+    border-radius: 5px;
+}
+/* .sa-innate-form input[type=text], input[type=password], input[type=file], textarea, select, email{
+    font-size:13px;
+	padding:10px;
+	border:1px solid#ccc;
+	outline:none;
+	width:100%;
+	margin:8px 0;
+	
+} */
+.sa-innate-form input[type=submit]{
+    border:1px solid #0080c5;
+	background: #0080c5;
+	color:#fff;
+	padding:10px 25px;
+	font-size:14px;
+    margin-top:5px;
+    border-radius: 5px;
+	}
+	.sa-innate-form input[type=submit]:hover{
+    border:1px solid #0080c5;
+    background: #0080c5;
+    color:#fff;
+    border-radius: 5px;
+	}
+	
+	.sa-innate-form button{
+    border:1px solid #0080c5;
+    background: #0080c5;
+	color:#fff;
+	font-size:14px;
+    margin-top:5px;
+    border-radius: 5px;
+    width: 100px;
+	}
+	.sa-innate-form button:hover{
+    border:1px solid #0080c5;
+    background: #0080c5;
+    color:#fff;
+    border-radius: 5px;
+	}
+    .sa-innate-form p{
+        font-size:13px;
+        padding-top:10px;
+    } 
+    
+/*Universal styling*/
 
 * {
     font-family: sans-serif, 'Roboto', helvetica, arial;
@@ -361,19 +492,23 @@ button {
 
 .results-card {
     border: 1px solid #000;
-    border-radius: 25px;
+    border-radius: 3px;
     margin-left: 25px;
     margin-bottom: 10px;
     padding: 20px;
+    height: auto;
 }
 
 .results-card h5{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    height: 50px;
 }
 
 .results-card p{
     font-size: 14px;
+    line-height: 20px;
 }
 
 #cityHeader h1{
@@ -383,3 +518,29 @@ button {
     font-size: 100px;
     font-family: sans-serif, 'Roboto', helvetica, arial;
 }
+
+/* Results Header */ 
+.results-music-header h1{
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 100px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
+
+}
+
+.results-sports-header h1{
+padding-bottom: 10px;
+font-weight: 400;
+font-size: 100px;
+font-family: sans-serif, 'Roboto', helvetica, arial;
+
+}
+
+.results-outdoors-header h1{
+padding-bottom: 10px;
+font-weight: 400;
+font-size: 100px;
+font-family: sans-serif, 'Roboto', helvetica, arial;
+}
+
+.color-blue {color: #0080c5;}
