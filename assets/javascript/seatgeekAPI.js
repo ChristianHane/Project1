@@ -66,5 +66,9 @@ $('.sportButton').on('click', function (event) {
 });
 
 $(document).ready(function () {
-  $('#cityHeader').text(localStorage.getItem('location'))
+  $('#cityHeader').text(localStorage.getItem('location'));
+  $('#cityResults').text(localStorage.getItem('location'));
+  $('html, body').animate({
+    scrollTop: $(".results-content").offset().top
+  }, 1000);
 });
