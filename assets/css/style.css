@@ -241,8 +241,14 @@ input {
 
 button {
     background-color: #000;
+    border-bottom: 1px solid #ccc;
     color: #fff;
+    font-weight: lighter;
     font-family: sans-serif, 'Roboto', helvetica, arial;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 125px;
 }
 
 .navbar {
@@ -391,7 +397,7 @@ button {
 }
 
 .results-content {
-    background-color: #fff;
+    background-color:#eeeeee;
     padding-top: 60px;
     padding-bottom: 60px;
     color: #000;
@@ -507,12 +513,16 @@ button {
 /* Results Card */
 
 .results-card {
-    border: 1px solid #000;
-    border-radius: 3px;
-    margin-left: 25px;
+    border-bottom: 1px solid #777;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
     margin-bottom: 10px;
     padding: 20px;
-    height: auto;
+    min-height: 208px;
+    max-height: 300px;
+    /* align-self: auto; */
 }
 
 .results-card h5{
@@ -564,4 +574,35 @@ font-family: sans-serif, 'Roboto', helvetica, arial;
 .dropdown-menu {
     background-color:  rgba(255,255,255,0.8);
     
+}
+
+.event-info p{
+    line-height: 14px;
+}
+
+.results-btn {
+    margin-top: 15px;
+    float: right;
+}
+
+.results-title {
+    margin-bottom: 20px;
+}
+.results-container {
+    margin-left: 100px;
+}
+#sports-results-display-zone {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#list-places {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#music-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
