@@ -40,9 +40,9 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown active">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" alt="Log In or Register"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
               
-              <!-- Dropdown menu -->
+              <!-- Dropdown menu -->               
               <ul class="dropdown-menu">
                 <div class="container container-sign-in">
                   <div class="row">
@@ -52,35 +52,38 @@
                           <li class="active"><a class="text-center" data-toggle="tab" href="#sectionA">Sign In</a></li>
                           <li><a class="text-center" data-toggle="tab" href="#sectionB">Register</a></li>
                         </ul>
+
                         <div class="tab-content">
                           <div id="sectionA" class="tab-pane fade in active">
                             <div class="innter-form">
                               <form class="sa-innate-form" method="post">
+
                                 <div class="form-group">
                                   <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
                                     <!--EMAIL ADDRESS-->
-                                    <input id="emailInput" placeholder="email address" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                                    <input id="sign-in-email" placeholder="email address" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
                                   </div>
                                 </div>
+
                                 <div class="form-group">
                                   <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock color-blue"></i></span>
-                                    <!--EMAIL ADDRESS-->
-                                    <input id="passwordInput" placeholder="password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                                    <!--sign-in-password-->
+                                    <input id="sign-in-password" placeholder="password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
                                   </div>
                                 </div>
+
                                 <div class="form-group">
                                   <!--BUTTON-->
-                                  <button type="submit" class="btn btn-primary form-control">Login</button>
-                                  <span class="pull-right" style="padding:10px"><a href="#" style="size: 8px; color: #777">Forgot Password?</a></span>
+                                  <button type="sign-in-submit" class="pull-left btn btn-primary form-control">Login</button>
+                                  <p class="text-right"><a href="#" class="text-right">Forgot Password?</a></p>
                                 </div>
                                 <hr>
                                 <div class="social-login">
                                   <ul>
-                                    <li><a href=""><i class="fa fa-facebook"></i> Sign in with Facebook</a></li>
-                                    <li><a href=""><i class="fa fa-google-plus"></i> Sign in with Google+</a></li>
-                                    <li><a href=""><i class="fa fa-twitter"></i> Sign in with Twitter</a></li>
+                                    <li><a href="#" id="sign-in-fb"><i class="fa fa-facebook"></i> Sign in with Facebook</a></li>
+                                    <li><a href="#" id="sign-in-google"><i class="fa fa-google-plus"></i> Sign in with Google+</a></li>
                                   </ul>
                                 </div>
                               </form>
@@ -90,33 +93,36 @@
 
                           <!-- Register dropdown-->
                           <div id="sectionB" class="tab-pane fade">
-                            <div class="innter-form">
+                            <div class="innter-form">  
                               <form class="sa-innate-form" method="post">
                                 <div class="form-group">
                                   <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
                                     <!--EMAIL ADDRESS-->
-                                    <input id="emailInput" placeholder="email address" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                                    <input id="email" placeholder="email address" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
                                   </div>
                                 </div>
+
                                 <div class="form-group">
                                   <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock color-blue"></i></span>
-                                    <!--EMAIL ADDRESS-->
-                                    <input id="passwordInput" placeholder="enter password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                                    <!--pasword-->
+                                    <input id="password" placeholder="enter password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
                                   </div>
                                 </div>
+
                                 <div class="form-group">
                                   <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock color-blue"></i></span>
                                     <!--REPEAT PASSWORD-->
-                                    <input id="passwordInput" placeholder="repeat password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                                    <input id="repeat-password" placeholder="repeat password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
                                   </div>
                                 </div>
+
                                 <div class="form-group">
                                   <!--BUTTON-->
-                                  <button type="submit" class="pull-left btn btn-primary form-control">Register</button>
-                                  <p class="text-right" style="size: 8px;color: #ccc">View our<a href="#" style="color: #777">Terms &amp; Conditions</a>.</p>
+                                  <button id="register-submit" type="submit" class="pull-left btn btn-primary form-control">Register</button>
+                                  <p class="text-right"><a class="text-right" href="#"> Terms &amp; Conditions</a></p>
                                 </div>
                               </form>
                             </div>
