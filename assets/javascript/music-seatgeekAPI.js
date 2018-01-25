@@ -67,7 +67,7 @@ $.ajax({
     link.attr("href", data.events[i].venue.url);
     link.attr("target", "_blank");
     link.addClass("btn btn-primary");
-    link.text("More Info");
+    link.text("Buy Tickets on SeatGeek!");
 
     result.append(header);
     result.append(p);
