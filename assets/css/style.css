@@ -236,7 +236,7 @@ button {
 
 .results-content {
     background-color: #fff;
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 60px;
     color: #000;
     font-size: 25px;
@@ -365,4 +365,13 @@ button {
 
 .results-card p{
     font-size: 14px;
+}
+
+.music-buttons-container {
+    display: flex;
+    text-align: center;
+    
+}
+.music-buttons {
+    margin: auto;
 }
