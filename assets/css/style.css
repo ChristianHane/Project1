@@ -516,11 +516,13 @@ button {
     border-bottom: 1px solid #777;
     background-color: #fff;
     border-radius: 5px;
-    margin-right: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
     margin-bottom: 10px;
     padding: 20px;
     min-height: 208px;
-    max-height: auto;
+    max-height: 300px;
+    /* align-self: auto; */
 }
 
 .results-card h5{
@@ -580,4 +582,27 @@ font-family: sans-serif, 'Roboto', helvetica, arial;
 
 .results-btn {
     margin-top: 15px;
+    float: right;
+}
+
+.results-title {
+    margin-bottom: 20px;
+}
+.results-container {
+    margin-left: 100px;
+}
+#sports-results-display-zone {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#list-places {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#music-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
