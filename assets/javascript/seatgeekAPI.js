@@ -1,46 +1,79 @@
-// seat geek API action
-/*
-notes about query string params:
-EVENTS Endpoint = https://api.seatgeek.com/2/events
-client_id=clientID, like API-key
-geoip=true is to use ip address geographic location, or zip code
-range= is to find results w/i ##mi radius. can use '##km' for km range. default is 30mi
-per_page= is results per page set to number used
-page=1 is page to show, it is 1-indexed. can change this to flip thru results
-performers.slug=name-of-band-or-team-etc is to search performer(s) - can be used multiple times & can be either .id= or .slug= style in same query
-venue.(keys from venues)
-taxonomies param uses same modifiers as taxonomies endpoint
-!!!sorting - review docs & add later - sort by date, etc. .asc/.desc for ascending/descending
-!!!filtering - review docs & add later - sort by price, etc.
-notes about returned data object: 'The Events Response Document' section has all details
-VENUES Endpoint = https://api.seatgeek.com/2/venues
-PERFORMERS Endpoint = https://api.seatgeek.com/2/performers
-can be used to get performer info. links to spotify/lastFM, etc.
-*/
+// seatGeek API action
+// when a sport type button is clicked...
+$('.sportButton').on('click', function (event) {
 
-var rangeUserInput = 0; // get this val from an input box
-var zipUserInput = 00000; // for zip code entry from input box
-var miOrKm = ''; // mi or km for range units
-var resultsPerPageUserInput = 0; // allow user to select how many results per page? or maybe just set a default to keep page formatting to a known value / ease of styling
-var resultsPageNumber = 1; // start @ 1 then have some way to change later
-var performerUserInput = ''; // implement a way to add multiple performers later, like the movie search classwork/giphy wall hw
+  event.preventDefault();
 
-// breaking out query string into it's constituent params
-var endpoint = 'https://api.seatgeek.com/2/events?'; // maybe turn into an array so that VENUES or PERFORMERS or EVENTS endpoint can be chosen
-var client_id = 'client_id=MTAyNzk5MDR8MTUxNTg4MDMzMi4wOA';
-var locationIP = '&geoip=true'; // need to add an if/else for possible zipCode use here. make IP address use default.
-var locationZip = '&geoip=' + zipUserInput; // pass location user input here for zipCode
-var range = '&range=' + rangeUserInput + miOrKm;
-var resultsPerPage = '&per_page=' + resultsPerPageUserInput;
-var pageNumber = '&page=' + resultsPageNumber;
-var performerSelection = '&performers.slug=' + performerUserInput;
+  $('#sports-results-display-zone').empty();
 
-// query string concatenated
-var urlString = endpoint + client_id + (locationIP || locationZip) + range + resultsPerPage + pageNumber + performerSelection;
+  var selectedTaxonomy = $(this).val();
 
-$.ajax({
-    url: 'https://api.seatgeek.com/2/events?client_id=MTAyNzk5MDR8MTUxNTg4MDMzMi4wOA&geoip=true&range=25mi&per_page=25&page=1&performers.slug=los-angeles-kings', // make this = urlString later
+  var lat = '&lat=' + localStorage.getItem('lat');
+  var lon = '&lon=' + localStorage.getItem('lng');
+  var endpoint = 'https://api.seatgeek.com/2/events';
+  var client_id = '?client_id=MTAyNzk5MDR8MTUxNTg4MDMzMi4wOA';
+  var range = '&range=100mi';
+  var sportType = '&taxonomies.name=' + selectedTaxonomy;
+
+  var queryString = endpoint + client_id + lat + lon + range + sportType;
+
+  // get seatGeek data
+  $.ajax({
+    url: queryString,
     method: 'GET',
-}).done(function(data) {
-    console.log(data);
+  }).done(function (response) {
+
+    var sportsEvents = response.events;
+
+    // loop thru events & make a card displaying important info for each event - venue, date/time, link to buy tix, etc.
+    for (var i = 0; i < sportsEvents.length; i++) {
+
+      var result = $('<div>');
+      result.addClass('card col-sm-5 results-card');
+
+      var resultHeader = $('<h5>');
+      resultHeader.addClass = ('event-title');
+      resultHeader.text(sportsEvents[i].title);
+
+      // get time of event & format using moment.js
+      var eventTime = sportsEvents[i].datetime_local;
+      var eventTimeConverted = moment(eventTime).format('hh:mma, MM-DD-YYYY');
+
+      var lowPrice = sportsEvents[i].stats.lowest_price;
+      // if lowest price is null, say it's unlisted, otherwise post it
+      if (lowPrice === null) {
+        lowPrice = 'Not Listed';
+      } else {
+        lowPrice = '\$'+ lowPrice;
+      }
+
+      var resultBody = $('<p>');
+      resultBody.addClass('event-info');
+      resultBody.append('<p>' + '<b>' + 'Event Type: ' + '</b>' + sportsEvents[i].type + '</p>');
+      resultBody.append('<p>' + '<b>' + 'Local Start Time: ' + '</b>' + eventTimeConverted + '</p>');
+      resultBody.append('<p>' + '<b>' + 'Venue Name: ' + '</b>' + sportsEvents[i].venue.name + '</p>');
+      resultBody.append('<p>' + '<b>' + 'Address: ' + '</b>' + sportsEvents[i].venue.address + '\, ' + sportsEvents[i].venue.extended_address + '</p>');
+      resultBody.append('<p>' + '<b>' + 'Lowest Price: ' + '</b>' + lowPrice + '</p>');
+
+      var resultLink = $('<a>');
+      resultLink.attr('href', sportsEvents[i].url);
+      resultLink.addClass('results-btn btn btn-info');
+      resultLink.text('Buy Tickets on SeatGeek!');
+      resultLink.attr('target', '_blank');
+
+      result.append(resultHeader);
+      result.append(resultBody);
+      result.append(resultLink);
+
+      $('#sports-results-display-zone').append(result);
+    }
+  });
+});
+
+$(document).ready(function () {
+  $('#cityHeader').text(localStorage.getItem('location'));
+  $('#cityResults').text(localStorage.getItem('location'));
+  $('html, body').animate({
+    scrollTop: $(".results-content").offset().top
+  }, 1000);
 });

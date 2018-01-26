@@ -1,12 +1,175 @@
-.body {
-    background-color: #000;
-}
-.dropdown:hover .dropdown-menu {
-    display: block;
+/*form*/
+
+.container-sign-in {
+    margin-left: -400px;
+    margin-right: -400px;
 }
 
-.main-header, .parallax {
-    padding-top: 200px;
+.form-body{
+    background-color: transparent;
+    padding:20px;
+    min-width: 300px;
+}
+
+
+.form-group a {
+    color: #777;
+    font-size: 10px;
+    padding-top: 10px;
+}
+
+.form-group a:hover {
+    color: #0080c5;
+    font-size: 10px;
+}
+
+.login-form{
+    background:rgba(255,255,255,0.8);
+	padding:20px;
+    border-top:3px solid#3e4043;
+    min-width: 300px;
+}
+.innter-form{
+	padding-top:20px;
+}
+.final-login li{
+	width:50%;
+}
+
+.nav-tabs {
+    border-bottom: none !important;
+}
+
+.nav-tabs>li{
+	color:#222 !important;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #fff;
+    background-color: #0080c5;
+    border: none !important;
+    border-bottom-color: transparent;
+	border-radius:none !important;
+}
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.428571429;
+    border: none !important;
+    border-radius:none !important;
+	text-transform:uppercase;
+	font-size:14px;
+}
+
+.social-login{
+	text-align:center;
+    font-size:12px;
+
+}
+.social-login p{
+	margin:15px 0;
+}
+.social-login ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.social-login ul li{
+	width: 100%;
+	float:left;
+    clear:fix;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+.social-login ul li a{
+	font-size:13px;
+	color:#fff;
+	text-decoration:none;
+	padding:10px 0;
+    display:block;
+    border-radius: 5px;
+}
+.social-login ul li:nth-child(1) a{
+    background:#3b5998;
+    border-radius: 5px;
+}
+.social-login ul li:nth-child(2) a{
+    background:#e74c3d;
+    border-radius: 5px;
+}
+.social-login ul li:nth-child(3) a{
+    background:#3698d9;
+    border-radius: 5px;
+}
+/* .sa-innate-form input[type=text], input[type=password], input[type=file], textarea, select, email{
+    font-size:13px;
+	padding:10px;
+	border:1px solid#ccc;
+	outline:none;
+	width:100%;
+	margin:8px 0;
+	
+} */
+.sa-innate-form input[type=submit]{
+    border:1px solid #0080c5;
+	background: #0080c5;
+	color:#fff;
+	padding:10px 25px;
+	font-size:14px;
+    margin-top:5px;
+    border-radius: 5px;
+	}
+	.sa-innate-form input[type=submit]:hover{
+    border:1px solid #0080c5;
+    background: #0080c5;
+    color:#fff;
+    border-radius: 5px;
+	}
+	
+	.sa-innate-form button{
+    border:1px solid #0080c5;
+    background: #0080c5;
+	color:#fff;
+	font-size:14px;
+    margin-top:5px;
+    border-radius: 5px;
+    width: 100px;
+	}
+	.sa-innate-form button:hover{
+    border:1px solid #0080c5;
+    background: #0080c5;
+    color:#fff;
+    border-radius: 5px;
+	}
+    .sa-innate-form p{
+        font-size:13px;
+        padding-top:10px;
+    } 
+    
+/*Universal styling*/
+
+* {
+    font-family: sans-serif, 'Roboto', helvetica, arial;
+}
+
+body {
+    background-color: #000;
+    font-family: sans-serif;
+}
+
+p {
+    font-family:sans-serif, 'Roboto', helvetica, arial;
+}
+
+input {
+    font-family: sans-serif, 'Roboto', helvetica, arial;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    min-width: 300px;
+}
+
+.main-header {
+    padding-top: 100px;
     padding-bottom: 200px;
     position: relative;
     color: #fff;
@@ -27,7 +190,8 @@
 
 }
 
-.main-secondary{
+/* Continued Parallax Background */
+.main-divider{
     padding-top: 200px;
     padding-bottom: 200px;
     position: relative;
@@ -49,92 +213,47 @@
 
 }
 
-.htmlMusic {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    position: relative;
-    color: #fff;
-    font-size: 25px;
-
-    /* The image used */
-    background-image: url(../images/music-tomorrowland.jpg);
-
-    /* Full height */
-    height: 100%; 
-    height: 702px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.htmlSports {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    position: relative;
-    color: #fff;
-    font-size: 25px;
-
-    /* The image used */
-    background-image: url(../images/sports-soccer-stadium.jpg);
-
-    /* Full height */
-    height: 100%; 
-    height: 702px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.htmlOutdoors {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    position: relative;
-    color: #fff;
-    font-size: 25px;
-
-    /* The image used */
-    background-image: url(../images/outdoors-fox-view.jpg);
-
-    /* Full height */
-    height: 100%; 
-    height: 702px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .main-header h1{
+    padding-top: 200px;
+    padding-bottom: 10px;
     font-weight: 400;
     font-size: 100px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 }
+
+
 
 .main-header form {
     padding-top: 30px;
 }
 
 .search-content {
-    height: 500px;
+    height: auto;
     background-color: #000;
     padding-top: 60px;
     padding-bottom: 60px;
     color: #fff;
     font-size: 25px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 }
+
 
 button {
     background-color: #000;
+    border-bottom: 1px solid #ccc;
     color: #fff;
+    font-weight: lighter;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 125px;
 }
 
 .navbar {
     background-color: #000;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 }
 
 .locationSearchBar {
@@ -191,6 +310,7 @@ button {
     position: relative;
     color: #fff;
     font-size: 25px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 
     /* image */
     background-image: url(../images/movies-montage.jpg);
@@ -211,6 +331,7 @@ button {
     position: relative;
     color: #fff;
     font-size: 25px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 
     /* image */
     background-image: url(../images/music-tomorrowland.jpg);
@@ -225,12 +346,21 @@ button {
     background-size: cover;
 
 }
+
+.results-music-header h1{
+        padding-bottom: 10px;
+        font-weight: 400;
+        font-size: 100px;
+        font-family: sans-serif, 'Roboto', helvetica, arial;
+    
+}
 .results-sports-header {
     padding-top: 200px;
     padding-bottom: 100px;
     position: relative;
     color: #fff;
     font-size: 25px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
 
     /* image */
     background-image: url(../images/sports-soccer-stadium.jpg);
@@ -265,13 +395,14 @@ button {
     background-size: cover;
 
 }
+
 .results-content {
-    background-color: #fff;
+    background-color:#eeeeee;
     padding-top: 60px;
     padding-bottom: 60px;
     color: #000;
     font-size: 25px;
-    height: 500px;
+    height: auto;
 }
 
 .results-bar {
@@ -280,6 +411,10 @@ button {
     color: #fff;
     padding: 5px;
 
+}
+
+.main-form {
+    padding-top: 25px;
 }
 
 
@@ -299,14 +434,175 @@ button {
 }
 
 #cityLinks {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 #cityLinks a{
     color: #fff;
-    font-size: 18px;
+    font-size: 12px;
 }
 
 #cityLinks a:hover {
     text-decoration: none;
+}
+
+/* Options Div */
+
+#optionsContent {
+    display: none;
+    height: auto;
+    background-color: #000000;
+    padding-bottom: 60px;
+    padding-top: 30px;
+    color: #fff;
+    font-size: 25px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
+}
+
+#optionsContent a:hover {
+    text-decoration: none;
+}
+
+
+.options-group p{
+    padding-top: 25px;
+    font-size: 18px;
+}
+/* Button backgrounds */
+
+.concerts-btn {
+    background-image: url(../images/pexels-photo-219101.jpg);
+    background-size: cover;
+
+}
+
+.sports-btn {
+    background-image: url(../images/sports-btn.jpg);
+    background-size: cover;
+
+}
+
+.outdoors-btn {
+    background-image: url(../images/outdoors-btn.jpg);
+    background-size: cover;
+
+}
+
+
+.options-card {
+    position: center;
+    border: 1px solid #000;
+    border-radius: 25px;
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+    margin-left: 50px;
+    text-align: center;
+
+    
+}
+
+.options-inner {
+    padding-top: 125px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+
+/* Results Card */
+
+.results-card {
+    border-bottom: 1px solid #777;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    min-height: 208px;
+    max-height: 300px;
+    /* align-self: auto; */
+}
+
+.results-card h5{
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    height: 50px;
+}
+
+.results-card p{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#cityHeader h1{
+    padding-top: 200px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 100px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
+}
+
+/* Results Header */ 
+.results-music-header h1{
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 100px;
+    font-family: sans-serif, 'Roboto', helvetica, arial;
+
+}
+
+.results-sports-header h1{
+padding-bottom: 10px;
+font-weight: 400;
+font-size: 100px;
+font-family: sans-serif, 'Roboto', helvetica, arial;
+
+}
+
+.results-outdoors-header h1{
+padding-bottom: 10px;
+font-weight: 400;
+font-size: 100px;
+font-family: sans-serif, 'Roboto', helvetica, arial;
+}
+
+.color-blue {color: #0080c5;}
+
+.dropdown-menu {
+    background-color:  rgba(255,255,255,0.8);
+    
+}
+
+.event-info p{
+    line-height: 14px;
+}
+
+.results-btn {
+    margin-top: 15px;
+    float: right;
+}
+
+.results-title {
+    margin-bottom: 20px;
+}
+.results-container {
+    margin-left: 100px;
+}
+#sports-results-display-zone {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#list-places {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#music-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

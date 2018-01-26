@@ -1,121 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>stuff-to-do</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <title>stuff-to-do</title>
+  <!-- CSS reset -->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <!-- Bootstrap CSS v3.3.7 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <!-- Optional Bootstrap theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
 
-        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-        <!-- Bootstrap CSS -->
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    </head>
-
-    <body>
-        <header>
-            <!-- Navbar-->
-             <!-- Fixed navbar -->
-            <nav class="navbar navbar-inverse bg-inversebg-inverse navbar-fixed-top">
-             <div class="container">
-              <div class="navbar-header navi">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">stuff-to-do</a>
-              </div>
-              <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-left">
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#contact">Contact</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#">Register</a></li>
-                  <li class="dropdown active">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Log In <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                          <!--
-                          <li><a href="#">Action</a></li>
-                          <li><a href="#">Another action</a></li>
-                          <li><a href="#">Something else here</a></li>
-                          <li role="separator" class="divider"></li>
-                          <li class="dropdown-header">Nav header</li>
-                          <li><a href="#">Separated link</a></li>
-                          <li><a href="#">One more separated link</a></li>
-                          -->
+<body>
+  <header>
+    <!-- Navbar -->
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse bg-inversebg-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header navi">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">stuff-to-do</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" alt="Log In or Register"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+              
+              <!-- Dropdown menu -->               
+              <ul class="dropdown-menu">
+                <div class="container container-sign-in">
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                      <div class="form-body">
+                        <ul class="nav nav-tabs final-login">
+                          <li class="active"><a class="text-center" data-toggle="tab" href="#sectionA">Sign In</a></li>
+                          <li><a class="text-center" data-toggle="tab" href="#sectionB">Register</a></li>
                         </ul>
-                      </li>
-                </ul>
-              </div><!--/.nav-collapse -->
-            </div>
-          </nav>
-        </header>
 
-        <div class="results-outdoors-header">
-            
-            <div class="container">
-                <h1 class="text-center">stuff-to-do</h1>
+                        <div class="tab-content">
+                          <div id="sectionA" class="tab-pane fade in active">
+                            <div class="innter-form">
+                              <form class="sa-innate-form" method="post">
 
-                <div id="activitiesHeader"><p class="text-center">events in <u>your city</u>.</p></div>
+                                <div class="form-group">
+                                  <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                    <!--EMAIL ADDRESS-->
+                                    <input id="sign-in-email" placeholder="email address" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                                  </div>
+                                </div>
 
-            </div>
+                                <div class="form-group">
+                                  <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock color-blue"></i></span>
+                                    <!--sign-in-password-->
+                                    <input id="sign-in-password" placeholder="password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                                  </div>
+                                </div>
 
+                                <div class="form-group">
+                                  <!--BUTTON-->
+                                  <button type="sign-in-submit" class="pull-left btn btn-primary form-control">Login</button>
+                                  <p class="text-right"><a href="#" class="text-right">Forgot Password?</a></p>
+                                </div>
+                                <hr>
+                                <div class="social-login">
+                                  <ul>
+                                    <li><a href="#" id="sign-in-fb"><i class="fa fa-facebook"></i> Sign in with Facebook</a></li>
+                                    <li><a href="#" id="sign-in-google"><i class="fa fa-google-plus"></i> Sign in with Google+</a></li>
+                                  </ul>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="clearfix"></div>
+                          </div>
+
+                          <!-- Register dropdown-->
+                          <div id="sectionB" class="tab-pane fade">
+                            <div class="innter-form">  
+                              <form class="sa-innate-form" method="post">
+                                <div class="form-group">
+                                  <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                    <!--EMAIL ADDRESS-->
+                                    <input id="email" placeholder="email address" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock color-blue"></i></span>
+                                    <!--pasword-->
+                                    <input id="password" placeholder="enter password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock color-blue"></i></span>
+                                    <!--REPEAT PASSWORD-->
+                                    <input id="repeat-password" placeholder="repeat password" class="form-control" type="password" oninvalid="setCustomValidity('Please enter a password!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <!--BUTTON-->
+                                  <button id="register-submit" type="submit" class="pull-left btn btn-primary form-control">Register</button>
+                                  <p class="text-right"><a class="text-right" href="#"> Terms &amp; Conditions</a></p>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="clearfix"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
+  </header>
 
-        <div class="results-bar">
+  <div class="results-outdoors-header">
+    <div class="container">
+      <h1 id="cityHeader" class="text-center">stuff-to-do</h1>
+      <div id="activitiesHeader">
+        <p class="text-center">browse outdoor activities.</p>
+      </div>
+    </div>
+  </div>
 
-              <div class="container">
-                  <h4>Results for:</h4>
-              </div>
+  <div class="results-bar">
+    <div class="container">
+      <h4>Results for outdoor activities in <span id="cityResults"></span>:</h4>
+    </div>
+  </div>
 
+  <div class="results-content">
+    <div class="container">
+      <div class="results-container">
+        <h1 class="results-title">Outdoors</h1>
+        <button class="outdoors-option" value="hiking">Hiking</button>
+        <button class="outdoors-option" value="camping">Camping</button>
+        <button class="outdoors-option" value="parks">Parks</button>
+        <hr>
+      </div>
+      <div id="list-places"></div>
+    </div>
+  </div>
 
-          </div>
-
+  <!-- Browse by city -->
+  <div class="search-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h5 class="text-left">Browse by city:</h5>
+          <hr>
         </div>
-        
-
-        <div class="results-content">
-          <div class="container">
-            <h1>Music</h1>
-            <hr>
-
-            </div>
+        <div id="cityLinks">
+          <div class="col-lg-3 cityLinks" value="Los Angeles"><a href="#">Los Angeles</a></div>
+          <div class="col-lg-3 cityLinks" value="Long Beach"><a href="#">Long Beach</a></div>
+          <div class="col-lg-3 cityLinks" value="Orange County"><a href="#">Orange County</a></div>
+          <div class="col-lg-3 cityLinks" value="San Diego"><a href="#">San Diego</a></div>
+          <div class="col-lg-3 cityLinks" value="San Franciso"><a href="#">San Francisco</a></div>
+          <div class="col-lg-3 cityLinks" value="East Bay"><a href="#">East Bay</a></div>
+          <div class="col-lg-3 cityLinks" value="San Jose"><a href="#">San Jose</a></div>
+          <div class="col-lg-3 cityLinks" value="Sacramento"><a href="#">Sacramento</a></div>
+          <div class="col-lg-3 cityLinks" value="New York"><a href="#">New York</a></div>
+          <div class="col-lg-3 cityLinks" value="Washington DC"><a href="#">Washington DC</a></div>
+          <div class="col-lg-3 cityLinks" value="Chicago"><a href="#">Chicago</a></div>
+          <div class="col-lg-3 cityLinks" value="Miami"><a href="#">Miami</a></div>
         </div>
+      </div>
+    </div>
+  </div>
 
-
-
-
-
-
-    <!-- Firebase --> 
-    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-                var config = {
-                    apiKey: "AIzaSyAaeV0UKgKCyxqybax2UDg3mbxkO2Hujn8",
-                    authDomain: "project-1-things-to-do.firebaseapp.com",
-                    databaseURL: "https://project-1-things-to-do.firebaseio.com",
-                    projectId: "project-1-things-to-do",
-                    storageBucket: "project-1-things-to-do.appspot.com",
-                    messagingSenderId: "1055885943744"
-                };
-                firebase.initializeApp(config);
-    </script>
-    
-    <!-- JQuery --> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-    <!-- Bootstrap JS--> 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>        
-    
-    <!-- Local JS -->
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+  <!-- Firebase v4.9.0 -->
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  <!-- JQuery v3.2.1 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- goodge places api -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALmBnC7ujQhjXxBEIP1UCH3Lp5zFJLXb4&libraries=places"></script>
+  <!-- Bootstrap JS v3.3.7 -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- app.js -->
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+  <!-- trailAPI -->
+  <script type="text/javascript" src="assets/javascript/trailAPI.js"></script>
 </body>
 </html>
